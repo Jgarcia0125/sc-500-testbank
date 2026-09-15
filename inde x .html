@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SC-500 Test Bank</title>
+<meta name="description" content="Practice questions for Microsoft SC-500, organized by learning path with instant feedback and explanations.">
+<style>
+:root{--bg:#f4f6f8;--panel:#fff;--ink:#16212b;--muted:#5d6b78;--line:#d8e0e7;
+--accent:#12557f;--ai:#fff;--ok:#1a7f52;--okbg:#e6f5ee;--bad:#b3261e;--badbg:#fdecea;
+--warn:#8a6100;--warnbg:#fdf3dc;--sh:0 1px 3px rgba(16,32,48,.08),0 6px 18px rgba(16,32,48,.06)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121820;--panel:#1b232d;
+--ink:#e7edf3;--muted:#9dabb8;--line:#2e3b48;--accent:#4d9fd6;--ai:#0d1319;--ok:#5fd3a0;
+--okbg:#153228;--bad:#ff8b80;--badbg:#3a1d1a;--warn:#e8bf6a;--warnbg:#332a12;
+--sh:0 1px 3px rgba(0,0,0,.4),0 6px 18px rgba(0,0,0,.3)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.55;font-size:15px;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:820px;margin:0 auto;padding:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px;box-shadow:var(--sh)}
+h1{font-size:1.45rem;margin:0 0 6px}h2{font-size:1.1rem;margin:20px 0 8px}
+p{margin:0 0 11px}.sub{color:var(--muted);margin-bottom:18px}
+.btn{background:var(--accent);color:var(--ai);border:0;border-radius:8px;padding:10px 18px;
+font-size:.95rem;font-weight:600;cursor:pointer;font-family:inherit}
+.btn:hover{filter:brightness(1.08)}.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.sm{padding:6px 12px;font-size:.85rem}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.spread{justify-content:space-between}
+.bar{position:sticky;top:0;z-index:20;background:var(--panel);border-bottom:1px solid var(--line);padding:10px 16px;margin-bottom:16px}
+.barin{max-width:820px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.prog{height:5px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:8px}
+.prog>i{display:block;height:100%;background:var(--accent);transition:width .25s}
+.qmeta{color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+.stem p{margin-bottom:10px}.ask{font-weight:650;margin:12px 0 12px;font-size:1.02rem}
+.opt{display:block;border:1px solid var(--line);border-radius:9px;padding:12px 14px;margin-bottom:9px;
+cursor:pointer;background:var(--panel)}
+.opt:hover{border-color:var(--accent)}
+.opt.sel{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.opt.correct{border-color:var(--ok);background:var(--okbg)}
+.opt.wrong{border-color:var(--bad);background:var(--badbg)}
+.opt.locked{cursor:default}
+.opt input{margin-right:10px}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:20px;
+background:var(--line);color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.verdict{border-radius:9px;padding:12px 14px;margin:14px 0 0;font-weight:650}
+.verdict.y{background:var(--okbg);color:var(--ok);border:1px solid var(--ok)}
+.verdict.n{background:var(--badbg);color:var(--bad);border:1px solid var(--bad)}
+.expl{border-left:3px solid var(--accent);background:var(--bg);padding:12px 14px;
+border-radius:0 8px 8px 0;margin-top:10px;font-size:.94rem}
+.expl .lbl{font-weight:700;display:block;margin-bottom:4px}
+.casebox{background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:14px;margin-bottom:14px;font-size:.92rem}
+.casebox h4{margin:0 0 8px;font-size:.93rem}
+.lp{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--line);
+border-radius:9px;padding:11px 14px;margin-bottom:8px;cursor:pointer;background:var(--panel)}
+.lp:hover{border-color:var(--accent)}
+.lp b{font-weight:650}.lp .n{color:var(--muted);font-size:.85rem}
+.stat{font-variant-numeric:tabular-nums;font-size:.85rem;color:var(--muted)}
+.note{background:var(--warnbg);border:1px solid var(--warn);color:var(--warn);border-radius:8px;padding:11px 13px;font-size:.9rem;margin:12px 0}
+.hide{display:none}ul.tight{margin:6px 0 10px;padding-left:20px}ul.tight li{margin-bottom:4px}
+code{background:var(--bg);padding:1px 5px;border-radius:4px;font-size:.88em}
+.score{font-size:2.6rem;font-weight:800;line-height:1.1}
+.dbar{height:6px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:6px}
+.dbar>i{display:block;height:100%}
+@media(max-width:520px){.wrap{padding:10px}.card{padding:16px}}
+</style></head><body>
+
+<div id="home" class="wrap"><div class="card">
+<h1>SC-500 Test Bank</h1>
+<p class="sub">Cloud and AI Security Engineer Associate &mdash; practice by learning path</p>
+<p>Answer one question at a time. Submit to check immediately, and every question shows an explanation of why the right answer is right and why the others are not.</p>
+<div class="row" style="margin:16px 0">
+<button class="btn" id="allBtn">All questions</button>
+<button class="btn ghost" id="missedBtn">Retry my missed</button>
+<button class="btn ghost" id="shuffleT">Shuffle: on</button>
+</div>
+<h2>By learning path</h2>
+<div id="lplist"></div>
+<div class="note" style="margin-top:18px"><strong>These are original questions.</strong> They cover the same objectives the Microsoft module knowledge checks test, but they are not copies of Microsoft's questions. Use them alongside the modules, not instead of them.</div>
+<p class="sub" style="margin-top:14px">Progress saves in this browser only. Nothing is uploaded anywhere.</p>
+<button class="btn ghost sm" id="reset">Reset all progress</button>
+</div></div>
+
+<div id="quiz" class="hide">
+<div class="bar"><div class="barin">
+<div><strong id="setName">All questions</strong> <span class="tag" id="pos">1 / 1</span></div>
+<div class="row"><span class="stat" id="running"></span>
+<button class="btn ghost sm" id="home2">Menu</button></div>
+</div><div class="prog"><i id="pbar"></i></div></div>
+<div class="wrap"><div class="card">
+<div id="caseSlot"></div>
+<div class="qmeta" id="qmeta"></div>
+<div class="stem" id="stem"></div>
+<div class="ask" id="ask"></div>
+<div id="opts"></div>
+<div id="feedback"></div>
+<div class="row spread" style="margin-top:18px">
+<button class="btn" id="check">Submit answer</button>
+<button class="btn ghost" id="next">Next</button>
+</div>
+</div></div></div>
+
+<div id="done" class="hide wrap"><div class="card">
+<h1 style="margin-bottom:2px">Set complete</h1>
+<div class="score" id="dpct"></div><p class="sub" id="draw"></p>
+<div id="dadvice"></div>
+<div class="row" style="margin-top:18px">
+<button class="btn" id="againMissed">Retry the ones I missed</button>
+<button class="btn ghost" id="home3">Back to menu</button>
+</div></div></div>
+
+<script>
+const CASES={
+A:{title:"Case study 1 — Contoso Financial",body:`<p>Contoso Financial is a regional bank running a hybrid estate. Roughly 400 Windows Servers sit in two on-premises datacenters; the rest runs in three Azure subscriptions under one management group. All on-premises servers are already onboarded to Microsoft Defender for Endpoint via Group Policy.</p><p>Requirements:</p><ul class="tight"><li>On-premises servers must be assessed against the Azure compute security baseline, with evidence exportable for the annual regulatory examination.</li><li>Windows Security events from on-premises servers must reach Microsoft Sentinel, but those servers must not have direct outbound internet access.</li><li>Administrative access to Azure VMs must not require any public IP address.</li><li>Backup data must survive compromise of the backup administrator's account.</li><li>Where two solutions both satisfy a requirement, the one granting less privilege must be chosen.</li></ul>`},
+B:{title:"Case study 2 — Fabrikam AI rollout",body:`<p>Fabrikam has deployed Microsoft 365 Copilot to 2,000 users and built custom agents in Microsoft Copilot Studio using generative orchestration. A separate data science team runs models in Microsoft Foundry behind Azure API Management.</p><p>Findings and requirements:</p><ul class="tight"><li>A SharePoint site containing merger documents is being summarized by Copilot for users who should not see it. Existing permissions must not be altered while the issue is investigated.</li><li>One Copilot Studio agent runs autonomously on a schedule with no signed-in user; another retrieves documents on behalf of the user who invoked it.</li><li>Model API costs spiked when one internal application entered a retry loop.</li><li>The SOC must see which agents exist, who owns them, and what each could reach if compromised.</li></ul>`}};
+const BANK=[
+{lp:1,d:1,t:"PIM",stem:`<p>Your organization uses Microsoft Entra ID P2. Global Administrator is assigned as an eligible role in Privileged Identity Management, and activation currently requires multifactor authentication.</p><p>A new policy states that becoming a Global Administrator must require a FIDO2 security key specifically, not any MFA method. All other sign-ins must continue to accept Microsoft Authenticator push notifications.</p>`,
+ask:"What should you configure?",
+o:["Set the tenant-wide authentication methods policy to allow only FIDO2 security keys.","Configure the PIM role setting to require Conditional Access authentication context on activation, then create a CA policy requiring the Phishing-resistant MFA authentication strength for that context.","Create a Conditional Access policy targeting all users requiring the Phishing-resistant MFA authentication strength.","Enable system-preferred MFA and register FIDO2 keys for all Global Administrators."],
+a:1,e:"Authentication context demands a stronger credential for one specific action rather than raising the bar everywhere. Tag PIM activation with an auth context, then require phishing-resistant MFA for that context in CA. Restricting the tenant-wide authentication methods policy, or requiring phishing-resistant MFA for all users, would change authentication everywhere and violate the requirement that normal sign-ins still accept push. System-preferred MFA prompts the strongest registered method but does not enforce one."},
+{lp:2,d:1,t:"Key Vault",stem:`<p>An engineer holds the Contributor role on a resource group containing a key vault that uses Azure RBAC for its permission model. She can see the vault and change its firewall settings, but receives a Forbidden error when reading a secret value.</p>`,
+ask:"Why can she not read the secret?",
+o:["The vault firewall is blocking her client IP address.","Contributor is a control-plane role; reading secret values requires a data-plane role such as Key Vault Secrets User.","Purge protection must be enabled before secrets can be read.","The vault uses the legacy vault access policy model, which ignores Azure RBAC."],
+a:1,e:"The control plane / data plane split, reported on the live exam. Contributor manages the vault as an Azure resource but grants no data-plane permission. The nuance worth knowing: she could grant herself a data-plane role, because role assignment is itself a control-plane operation — which is why Key Vault Contributor is a sensitive role. The vault access policy option contradicts the stem, which states the vault uses Azure RBAC."},
+{lp:3,d:1,t:"RBAC",stem:`<p>A team lead must be able to assign roles to members of her team within one subscription. She must not be able to grant anyone the Owner role, and must not be able to escalate her own privileges.</p>`,
+ask:"Which role should you assign, following least privilege?",
+o:["Owner","User Access Administrator","Role Based Access Control Administrator","Contributor"],
+a:2,e:"RBAC Administrator is the constrained delegation role: it assigns roles but explicitly cannot assign Owner or User Access Administrator. UAA can assign any role including Owner, so it escalates to effectively Owner and fails the requirement. Contributor cannot assign roles at all."},
+{lp:3,d:1,t:"Azure Policy",stem:`<p>You must report on virtual machines that do not have a diagnostic setting sending logs to a Log Analytics workspace. Reporting must cover existing machines. No resource may be created or modified as a result of the evaluation.</p>`,
+ask:"Which Azure Policy effect should you use?",
+o:["DeployIfNotExists","AuditIfNotExists","Deny","Modify"],
+a:1,e:"AuditIfNotExists reports when a related resource — the diagnostic setting — is missing, without changing anything. DeployIfNotExists would create it, which the stem forbids. Deny only blocks new or updated resources and does nothing for existing ones. The Audit versus DeployIfNotExists distinction was reported on the live exam."},
+{lp:3,d:1,t:"Azure Policy",stem:`<p>You assign a policy initiative with a DeployIfNotExists effect at a management group to install a required VM extension. The assignment has a system-assigned managed identity. Compliance evaluation flags non-compliant machines, but every remediation task fails.</p>`,
+ask:"What is the most likely cause?",
+o:["The managed identity has not been granted the role listed in the definition's roleDefinitionIds at the target scope.","DeployIfNotExists cannot be assigned at management group scope.","Remediation tasks only run during the 24-hour compliance evaluation cycle.","The assignment's enforcement mode is set to Disabled."],
+a:0,e:"DINE and Modify act rather than merely evaluate, so Policy needs an identity with permission to deploy. The definition declares required roles via roleDefinitionIds, and failing to grant them at the right scope is the most common cause of failed remediation. Enforcement mode Disabled would stop the effect applying at all rather than producing failing tasks."},
+{lp:3,d:1,t:"Governance",stem:`<p>A legacy application requires a storage account configuration that violates an organizational Deny policy. Leadership approved a documented deviation for 90 days while the application is rewritten. The deviation must expire automatically and apply only to that one storage account.</p>`,
+ask:"What should you create?",
+o:["A policy exclusion for the resource group containing the storage account.","A policy exemption on the storage account with the Waiver category and an expiration date.","A resource lock on the storage account.","A new policy assignment with enforcement mode set to Disabled."],
+a:1,e:"An exemption is the documented, time-bound, resource-scoped mechanism, categorized Waiver (risk accepted) or Mitigated (handled another way), with an optional expiration date. An exclusion removes an entire scope permanently and would cover more than the one account. Enforcement mode Disabled turns the policy off everywhere in that assignment."},
+{lp:3,d:1,t:"RBAC",stem:`<p>A custom Azure role includes a broad wildcard in Actions and lists a specific delete operation in NotActions. A user assigned this custom role also holds Contributor at subscription scope. The user successfully performs the delete operation listed in NotActions.</p>`,
+ask:"Why did the delete succeed?",
+o:["NotActions entries require an explicit deny assignment to take effect.","NotActions subtracts only within that role definition; the user's Contributor assignment still grants the operation.","NotActions is ignored when a wildcard is used in Actions.","Custom roles cannot restrict delete operations."],
+a:1,e:"NotActions is a subtraction within a single role definition, not a deny. Effective permissions are the union of all assignments, so another role granting the same action still permits it. A true deny requires a deny assignment, which comes only from Azure Blueprints or Managed Applications. Designing around NotActions expecting deny semantics is a common and consequential mistake."},
+{lp:1,d:1,t:"App identity",stem:`<p>A developer registers an application that will read mail. It must only read the mailbox of the user currently signed in, and must never read mailboxes of users who have not used it.</p>`,
+ask:"How should the Microsoft Graph permission be configured?",
+o:["Mail.Read as an application permission with tenant-wide admin consent","Mail.Read as a delegated permission","Mail.ReadWrite as an application permission restricted by an app role","Mail.Read as an application permission scoped by an application access policy"],
+a:1,e:"Delegated permissions mean the app acts as the signed-in user, and the effective permission is the intersection of the app's grant and the user's own rights. Application permissions mean the app acts as itself with no user and no intersection, so Mail.Read as an application permission reaches every mailbox in the tenant. Application access policies can narrow that, but delegated is the direct answer to the stated requirement."},
+{lp:1,d:1,t:"Managed identity",stem:`<p>A GitHub Actions workflow deploys resources to Azure using a service principal client secret stored as a repository secret. Security has mandated that no long-lived credential may exist for this pipeline.</p>`,
+ask:"What should you implement?",
+o:["A system-assigned managed identity on the GitHub runner","A certificate credential on the app registration, rotated every 90 days","A federated credential on the app registration trusting the GitHub OIDC issuer (workload identity federation)","An Azure Key Vault reference for the client secret"],
+a:2,e:"Workload identity federation adds a federated credential trusting an external OIDC issuer, so GitHub presents its own token and exchanges it for an Entra token. Nothing long-lived is stored. This is always the right answer for removing secrets from CI/CD. A managed identity is not available to a GitHub-hosted runner, and both a certificate and a vault-stored secret are still long-lived credentials."},
+{lp:2,d:1,t:"Key Vault",stem:`<p>After enabling the key vault firewall and restricting access to a single virtual network, Azure Disk Encryption operations begin to fail. Azure Backup jobs referencing the vault also fail.</p>`,
+ask:"What should you configure?",
+o:["Add the virtual machine private IP addresses to the vault's IP rules.","Enable the exception allowing trusted Microsoft services to bypass the firewall.","Change the permission model from vault access policy to Azure RBAC.","Create a private endpoint for the key vault."],
+a:1,e:"Azure Disk Encryption, Azure Backup, ARM deployments referencing secrets, Azure Firewall TLS inspection and Event Grid all depend on the trusted Microsoft services exception. Adding the VM private IPs is impossible regardless: key vault IP rules accept only public IPv4 addresses and CIDR ranges, never private RFC 1918 addresses. A private endpoint solves client connectivity, not the Microsoft service dependency."},
+{lp:3,d:1,t:"Backup",case:"A",stem:`<p>Refer to the Contoso scenario above.</p><p>You must satisfy the requirement that backup data survives compromise of the backup administrator's account, including where the attacker holds full permissions on the Recovery Services vault. Destructive operations must require approval from a separate security team.</p>`,
+ask:"What should you implement?",
+o:["Enable enhanced soft delete with a 180-day retention period.","Enable an immutable vault in the unlocked state.","Configure Multi-User Authorization using a Resource Guard in a different subscription, with access granted through PIM approval.","Assign the Backup Reader role to the backup administrator."],
+a:2,e:"Multi-User Authorization places a Resource Guard outside the backup administrator's control, ideally in a different tenant, owned by a security admin. Critical operations then require the backup admin to obtain Contributor on the Resource Guard, typically via PIM with approval, so a second person in a separate blast radius must consent. Soft delete delays destruction but requires no approval, and an unlocked immutable vault can be switched off by someone with sufficient rights."},
+{lp:3,d:1,t:"Entra roles",stem:`<p>A helpdesk team must rotate the client secret for one specific application registration. They must not be able to modify credentials on any other application in the tenant.</p>`,
+ask:"What should you create?",
+o:["An Azure custom role with AssignableScopes set to the application's resource ID","A Microsoft Entra custom role built on application credential resource actions, assigned at the scope of that single app registration object","An administrative unit containing the application, with Application Administrator assigned over it","A Conditional Access policy targeting the application"],
+a:1,e:"Entra custom roles require P1 or P2 and can be scoped to a single directory object such as one app registration, which is exactly this requirement. Azure custom roles govern Azure resources, not Entra directory objects, so AssignableScopes cannot point at an app registration. Administrative units scope users, groups and devices rather than application registrations."},
+{lp:6,d:2,t:"Azure Firewall",stem:`<p>An Azure Firewall policy contains a network rule collection allowing TCP 443 from the spoke subnets to any destination, and an application rule collection permitting only <code>*.contoso.com</code> over HTTPS. The application rule collection group has a lower priority number than the network rule collection group.</p><p>Users report they can browse to any site on the internet.</p>`,
+ask:"Why are the application rules not restricting traffic?",
+o:["Application rules require DNS proxy to be enabled on the firewall.","Azure Firewall processes network rules before application rules, and a matching network rule stops further evaluation.","The application rule collection group priority is lower than the network rule collection group's.","Threat intelligence filtering is set to Alert only, which bypasses application rules."],
+a:1,e:"Rule type order beats priority numbers every time: DNAT, then network, then application. The broad network rule matches first, so application rules are never evaluated and the FQDN restriction never applies. Priority only orders collections within the same rule type. DNS proxy is required for FQDNs in network rules, not application rules."},
+{lp:6,d:2,t:"NSG",stem:`<p>A virtual machine's network interface has an NSG permitting inbound TCP 1433 from a specific application subnet. The subnet containing the VM has a separate NSG whose highest-priority inbound rule denies all traffic from that same application subnet.</p>`,
+ask:"What is the result for inbound connections to port 1433?",
+o:["Allowed, because the NIC-level NSG is evaluated last and takes precedence.","Allowed, because the more specific rule always wins.","Denied, because for inbound traffic the subnet NSG is evaluated first and both NSGs must allow the traffic.","Denied, because NSGs cannot be applied at subnet and NIC level simultaneously."],
+a:2,e:"For inbound traffic the subnet NSG is evaluated first, then the NIC NSG, and both must permit the traffic. Outbound reverses the order — NIC first, then subnet — and again both must allow. There is no precedence by specificity, and applying NSGs at both levels is supported and common."},
+{lp:6,d:2,t:"AVNM",stem:`<p>A central security team must guarantee that inbound RDP from the internet is blocked across every virtual network in the tenant. Application teams retain ownership of their own NSGs and have previously added permissive rules. The control must not be overridable by those teams.</p>`,
+ask:"What should you implement?",
+o:["A security admin rule in Azure Virtual Network Manager with the Deny action","An NSG with a deny rule at priority 100 applied to every subnet","An Azure Policy with a Deny effect on NSG rule creation","An Azure Firewall policy with a network rule denying TCP 3389"],
+a:0,e:"AVNM security admin rules are evaluated before NSGs and cannot be overridden by NSG owners, which is exactly the stated requirement. An NSG rule can be changed by whoever owns that NSG. Azure Policy can block creation of non-compliant rules but does not itself filter traffic. Azure Firewall only inspects traffic routed through it."},
+{lp:6,d:2,t:"AVNM",stem:`<p>Following an acquisition, your organization operates two Microsoft Entra tenants. You must apply a single set of network security admin rules to virtual networks in both tenants from one Azure Virtual Network Manager instance.</p>`,
+ask:"What must happen before the managed tenant's virtual networks can be added to a network group?",
+o:["The virtual networks must be peered across the two tenants.","A cross-tenant scope connection must be created in the managing tenant and accepted by an administrator in the target tenant.","Both tenants must be consolidated under a single management group.","Azure Lighthouse delegation must be configured for the target subscriptions."],
+a:1,e:"Cross-tenant management in AVNM uses a scope connection: the managing tenant creates it naming the target tenant's management group or subscription, and an administrator in the target tenant must accept it before anything applies. That mutual consent is the point. Cross-tenant scenarios in Virtual Network Manager were reported on the live exam."},
+{lp:6,d:2,t:"Private Link",stem:`<p>On-premises users connected over ExpressRoute must reach an Azure storage account. The storage account must not be reachable from the public internet, and traffic must not traverse a public endpoint.</p>`,
+ask:"What should you implement?",
+o:["A service endpoint for Microsoft.Storage on the gateway subnet","A private endpoint for the storage account, with a private DNS zone and public network access disabled","A storage firewall IP rule permitting the on-premises public IP range","A service endpoint policy restricting access to the storage account"],
+a:1,e:"Service endpoints are not reachable from on-premises networks at all, eliminating A and D. An IP rule keeps the account publicly addressable and routes traffic over the internet. A private endpoint gives the account a private IP reachable over ExpressRoute, and disabling public network access closes the public door — remember a private endpoint is additive and does not close it by itself."},
+{lp:6,d:2,t:"Private Link",stem:`<p>You create a private endpoint for an Azure SQL logical server and disable public network access. Virtual machines in the same virtual network connect successfully. On-premises clients over a site-to-site VPN still resolve the server name to a public IP address and fail to connect.</p>`,
+ask:"What should you configure?",
+o:["A conditional forwarder on the on-premises DNS servers pointing to an Azure DNS Private Resolver or a DNS forwarder virtual machine","A second private endpoint in the gateway subnet","A service endpoint for Microsoft.Sql on the VPN gateway subnet","A network security group rule permitting TCP 1433 from the on-premises address space"],
+a:0,e:"On-premises DNS knows nothing about Azure private DNS zones, so it resolves the public FQDN normally. The fix is a conditional forwarder to something inside Azure that can resolve the privatelink zone. Private endpoint problems are almost always DNS problems, and working from inside the VNet but not from on-premises is the signature symptom."},
+{lp:4,d:2,t:"Storage",stem:`<p>Eight months ago a partner was issued an ad-hoc service shared access signature granting read access to a blob container. It was not associated with a stored access policy. The partnership has ended and the token must be invalidated immediately. Other applications using the storage account keys must continue working without interruption.</p>`,
+ask:"What should you do?",
+o:["Create a stored access policy on the container and then delete it.","Rotate the storage account key that signed the SAS.","Report that the SAS cannot be revoked without rotating the key that signed it, which would disrupt the other applications.","Disable Allow storage account key access on the storage account."],
+a:2,e:"An ad-hoc SAS embeds its permissions and expiry in the token and references no server-side object, so the only way to invalidate it is to rotate the signing key — which the stem forbids. Creating a stored access policy now does nothing for a token never bound to one. This is precisely why stored access policies exist and why ad-hoc SAS tokens should be avoided."},
+{lp:4,d:2,t:"Storage",stem:`<p>You must prevent all use of storage account keys and shared key authorization across every storage account in a management group, and prevent non-compliant accounts from being created in future.</p>`,
+ask:"What should you do?",
+o:["Assign the built-in policy preventing shared key access with a Deny effect at the management group scope.","Set Allow storage account key access to Disabled on each existing storage account.","Rotate both account keys on a 30-day schedule using Event Grid automation.","Enable Microsoft Defender for Storage on every subscription."],
+a:0,e:"Disabling the setting on each existing account fixes today's accounts but nothing created tomorrow, and does not scale. Key rotation does not eliminate shared key authorization, it just changes the key. Defender for Storage detects threats but does not enforce configuration. The policy with a Deny effect at management group scope addresses the pattern going forward and blocks non-compliant creation."},
+{lp:4,d:2,t:"Storage",stem:`<p>An administrator must read the contents of all files in an Azure file share for a compliance investigation, including files whose Windows ACLs deny her access.</p>`,
+ask:"Which role should you assign?",
+o:["Storage File Data SMB Share Reader","Storage File Data SMB Share Elevated Contributor","Storage File Data Privileged Reader","Storage Blob Data Reader"],
+a:2,e:"The SMB Share roles respect directory and file-level Windows ACLs on top of share-level access. The Privileged roles bypass those ACLs entirely, which is why they are sensitive assignments. Privileged Reader grants read access regardless of NTFS permissions. Storage Blob Data Reader applies to blobs, not file shares. This role was reported on the live exam."},
+{lp:4,d:2,t:"Storage",stem:`<p>An Azure AI Foundry resource must read training data from a storage account. The storage account firewall is enabled and public network access is restricted. Granting access to all trusted Microsoft services is considered too broad by the security team.</p>`,
+ask:"What should you configure?",
+o:["A resource instance rule naming the specific Azure AI resource","An IP rule permitting the AI service's outbound IP range","A service endpoint for Microsoft.Storage on the AI resource's subnet","The exception allowing read access to storage logging and metrics from any network"],
+a:0,e:"Resource instance rules allow one named Azure resource by resource ID, scoped to a subscription or tenant, instead of opening the firewall to the entire trusted services list. That is the least-privilege network answer, and the course calls out resource instance rules for Azure AI services specifically."},
+{lp:5,d:2,t:"SQL",stem:`<p>An Azure SQL database stores customer national identifiers. The requirement states that database administrators, who hold full server permissions, must not view the plaintext values. The application must still perform equality searches on the column.</p>`,
+ask:"What should you implement?",
+o:["Transparent Data Encryption with a customer-managed key","Dynamic Data Masking on the column","Always Encrypted with deterministic encryption","Row-Level Security with a BLOCK predicate"],
+a:2,e:"TDE encrypts at rest and is transparent to queries, so anyone who can query sees plaintext — it does not protect from a DBA. Dynamic Data Masking is a presentation-layer control, not a security boundary, and can often be defeated by inference through filtering. Always Encrypted keeps keys on the client so the engine never sees plaintext; deterministic encryption is required because randomized supports no equality lookups."},
+{lp:5,d:2,t:"SQL",stem:`<p>You enable auditing at the logical server level for an Azure SQL server, sending logs to a Log Analytics workspace. A colleague separately enables auditing on one database with the same destination and action groups. Costs increase and analysts report duplicated records.</p>`,
+ask:"What should you do?",
+o:["Disable the database-level auditing policy.","Disable the server-level auditing policy and keep database-level auditing.","Change the database-level audit destination to an Event Hub.","Reduce the audit action groups at the server level."],
+a:0,e:"Server-level auditing already covers every current and future database on the server. Enabling both produces duplicate logs, a cost and analysis problem. Database-level auditing is only appropriate when one database genuinely needs different action groups or a different destination. Disabling the server policy instead would leave the other databases unaudited."},
+{lp:4,d:2,t:"Defender for Storage",stem:`<p>A storage account receives file uploads from external partners. You must scan uploaded blobs for malware in near real time, an automated process must quarantine anything malicious, and monthly scanning cost must be capped.</p>`,
+ask:"Which two statements about this configuration are correct? (Choose two.)",multi:true,
+o:["Malware Scanning requires Event Grid, and a system topic is created for the storage account.","Scan results are written as a blob index tag that downstream automation can act on.","Malware Scanning supports files of any size with no per-file limit.","Malware Scanning covers blob containers, queues, and tables."],
+a:[0,1],e:"Malware Scanning depends on Event Grid and creates a system topic. Results land as a blob index tag (Malware Scanning scan result), the hook a Logic App or Function uses to quarantine or delete. The per-file limit is 2 GB, and a configurable monthly GB cap per storage account provides cost control. Defender for Storage covers Blob, Azure Files and Data Lake Gen2 — not queues or tables."},
+{lp:6,d:2,t:"VPN",stem:`<p>Remote users must connect to an Azure virtual network using a point-to-site VPN. Access must require multifactor authentication and must be blocked from outside approved countries. You want to reuse the organization's existing Conditional Access policies.</p>`,
+ask:"Which point-to-site configuration supports this?",
+o:["IKEv2 with certificate authentication","SSTP with RADIUS authentication","OpenVPN with Microsoft Entra ID authentication","IKEv2 with RADIUS authentication"],
+a:2,e:"Microsoft Entra ID authentication for point-to-site requires the OpenVPN protocol — a specific and testable constraint. Because authentication flows through an Entra enterprise application, Conditional Access applies, which is how you add MFA and location conditions. Certificate and RADIUS authentication cannot invoke Conditional Access."},
+{lp:6,d:2,t:"Network Watcher",stem:`<p>A virtual machine cannot reach a database server. You must determine, in a single step, whether the traffic is permitted and which specific rule is responsible, accounting for both NSGs and any Azure Virtual Network Manager security admin rules.</p>`,
+ask:"Which tool should you use?",
+o:["Next hop","Effective routes","IP flow verify","Connection monitor"],
+a:2,e:"IP flow verify takes a five-tuple and returns allowed or denied plus the responsible rule; NSG diagnostics is its richer successor showing the full evaluation path including admin rules. Next hop and effective routes answer routing questions, not filtering questions. Connection monitor gives ongoing reachability telemetry rather than a rule-level verdict. Remember: effective security rules for filtering, effective routes for path."},
+{lp:7,d:3,t:"Agent ID",case:"B",stem:`<p>Refer to the Fabrikam scenario above.</p><p>You must require multifactor authentication before the agent that retrieves documents on behalf of an invoking user can access SharePoint.</p>`,
+ask:"How should you scope the Conditional Access policy?",
+o:["Assign the policy to Agents and select All agent identities.","Assign the policy to Users or groups.","Assign the policy to the agent identity blueprint.","Assign the policy to Agents and select All agent users."],
+a:1,e:"In the on-behalf-of flow the signed-in user is the token subject throughout, so standard user-targeted Conditional Access applies and the full control set — MFA, device compliance, sign-in risk — is available. Applying an agent-targeted policy to an OBO flow will not intercept the authentication that matters."},
+{lp:7,d:3,t:"Agent ID",case:"B",stem:`<p>Refer to the Fabrikam scenario above.</p><p>For the agent that runs autonomously on a schedule with no signed-in user, the security team proposes a Conditional Access policy requiring multifactor authentication and a compliant device.</p>`,
+ask:"What is the problem with this proposal?",
+o:["Conditional Access cannot be applied to agent identities at all.","Autonomous agents authenticate non-interactively, so MFA and device compliance cannot be enforced; block sign-in, named locations, sign-in frequency and risk-based conditions can.","Agent identities require Microsoft Entra ID P2, which the scenario does not mention.","Conditional Access for agents only evaluates at the agent identity blueprint level."],
+a:1,e:"Autonomous agents use the OAuth 2.0 client credentials flow with no user present, so there is nobody to answer an MFA prompt and no registered device to evaluate. What CA can enforce for autonomous agent identities is block sign-in, named location conditions, sign-in frequency restrictions, and risk-based conditions from Entra ID Protection. The same limits apply to agent user accounts, which also authenticate non-interactively."},
+{lp:7,d:3,t:"Agent ID",stem:`<p>Your tenant contains dozens of agent identities and more are created weekly. You must apply a Conditional Access policy that automatically covers every new agent created for a particular product line, without editing the policy each time.</p>`,
+ask:"Which two approaches achieve this? (Choose two.)",multi:true,
+o:["Target the parent agent identity blueprint, which covers all agent identities derived from it.","Use custom security attributes on agent identities and write a policy condition matching an attribute value.","Select each agent identity individually under Select agent identities.","Assign the policy to All agent users."],
+a:[0,1],e:"Both are the scalable targeting approaches the module teaches. Blueprint-level targeting covers everything derived from that blueprint with one policy. Attribute-driven targeting uses custom security attributes — for example a DataSensitivity attribute — so the policy applies automatically to new agents carrying that value, with no policy update. Listing agents individually is described as operationally unsustainable. All agent users targets user-type agent accounts, a different pattern."},
+{lp:7,d:3,t:"Copilot Studio",case:"B",stem:`<p>Refer to the Fabrikam scenario above.</p><p>Real-time protection has been enabled for Copilot Studio agents. The Entra app registration with a federated identity credential is configured and the Power Platform administrator has entered the matching App ID. The Microsoft 365 app connector has not been connected.</p>`,
+ask:"What is the result?",
+o:["No inspection occurs until the connector is added.","Suspicious tool invocations are still blocked, but the resulting alerts and incidents do not appear in the Defender portal.","Inspection runs in audit mode only and writes to the Purview unified audit log.","Protection applies only to classic agents until the connector is added."],
+a:1,e:"Enforcement and visibility are separate here. Without the Microsoft 365 connector, protection still blocks — you lose the alerts and incidents in the Defender portal, not the enforcement. Two other details worth holding: Defender has roughly one second to allow or block before the agent proceeds, and only generative agents using generative orchestration are supported; classic agents are not."},
+{lp:7,d:3,t:"AI Gateway",case:"B",stem:`<p>Refer to the Fabrikam scenario above.</p><p>You must prevent a single internal application from consuming a disproportionate share of model capacity when it misbehaves, and you must attribute consumption per application for chargeback.</p>`,
+ask:"Which two API Management policies should you apply? (Choose two.)",multi:true,
+o:["llm-token-limit","llm-emit-metric","llm-content-safety","llm-semantic-cache-store"],
+a:[0,1],e:"llm-token-limit provides token-per-minute rate limiting by a counter key such as subscription key, source IP, or an expression for per-application limits, preventing one caller starving the rest. llm-emit-metric sends token metrics to Application Insights for chargeback and capacity planning. llm-content-safety handles harmful content and jailbreak detection; semantic caching reduces redundant calls but neither enforces a limit nor attributes consumption."},
+{lp:7,d:3,t:"Defender for AI",stem:`<p>The Defender for AI Services plan is enabled on a subscription. The SOC reports that alerts describe suspicious activity but show no portion of the prompt text, making intent hard to assess.</p>`,
+ask:"What is happening?",
+o:["Defender has stopped analyzing prompts because the Purview data security for AI interactions feature is not licensed.","The user prompt evidence setting is disabled, so Defender still analyzes prompts and responses but masks the content in alerts.","Prompt content is only available through Microsoft Sentinel, not Defender for Cloud.","The subscription is in the 30-day trial period, during which prompt evidence is withheld."],
+a:1,e:"The user prompt evidence toggle controls what analysts can see, not what Defender inspects. With it disabled, detection continues normally but the suspicious prompt segment and model response are masked in the alert. It is framed as a privacy decision because prompts are customer data. Separately, Purview data security for AI interactions is a paid Purview feature not included in the Defender for AI Services plan."},
+{lp:7,d:3,t:"Purview DSPM",case:"B",stem:`<p>Refer to the Fabrikam scenario above.</p><p>You must immediately stop Microsoft 365 Copilot and organization-wide search from surfacing content from the merger documents site. Existing user permissions must not be modified.</p>`,
+ask:"What should you configure?",
+o:["A Restricted Access Control (RAC) policy limiting the site to a security group","Restricted Content Discovery (RCD) on the site","A Purview data risk assessment with on-demand classification","A sensitivity label with the EXTRACT usage right removed"],
+a:1,e:"Restricted Content Discovery excludes a site from Copilot and org-wide search without changing any permissions, making it the fastest containment action and the only option satisfying the constraint. RAC restricts who can access the site, which does alter effective access. A data risk assessment identifies exposure but does not remediate it. Label-based EXTRACT removal works at item level and requires labels to already be applied."},
+{lp:8,d:3,t:"Bastion",case:"A",stem:`<p>Refer to the Contoso scenario above.</p><p>You must satisfy the requirement that administrative access to Azure virtual machines uses no public IP address. You deploy Azure Bastion.</p>`,
+ask:"Which inbound rule must the AzureBastionSubnet network security group contain?",
+o:["Allow TCP 3389 and 22 from the Internet service tag","Allow TCP 443 from the Internet service tag and from the GatewayManager service tag","Allow TCP 443 from the VirtualNetwork service tag only","Allow TCP 8080 from the AzureCloud service tag"],
+a:1,e:"Bastion requires inbound 443 from Internet for user connections and 443 from GatewayManager for the control plane, plus 443 from AzureLoadBalancer for health probes and 8080/5701 from VirtualNetwork for the data plane between instances. Outbound it needs 3389 and 22 to VirtualNetwork and 443 to AzureCloud. RDP and SSH are never opened inbound from the internet — that is the entire point of Bastion."},
+{lp:8,d:3,t:"Disk encryption",stem:`<p>A compliance requirement states that data written to a virtual machine's temporary disk and to the OS and data disk caches must be encrypted. Server-side encryption with platform-managed keys is already in effect.</p>`,
+ask:"What should you enable?",
+o:["Azure Disk Encryption","Encryption at host","Double encryption at rest","Confidential disk encryption"],
+a:1,e:"Server-side encryption protects managed disks at rest but does not cover the temporary disk or the disk caches. Encryption at host closes exactly that gap, encrypting the temp disk, the caches, and data flowing to the storage service. It must be enabled both as a subscription feature and on the VM, and the VM must be deallocated. ADE is in-guest BitLocker or dm-crypt and is the answer only when BitLocker is named."},
+{lp:8,d:3,t:"JIT",case:"A",stem:`<p>Refer to the Contoso scenario above.</p><p>A colleague proposes using just-in-time VM access in Microsoft Defender for Cloud to control administrative access to the 400 on-premises Windows Servers after onboarding them to Azure Arc.</p>`,
+ask:"Why will this not work?",
+o:["Just-in-time VM access requires Defender for Servers Plan 1, which does not support Arc machines.","Just-in-time VM access works by adding a time-limited rule to an NSG or Azure Firewall, and on-premises Arc machines have neither.","Arc-enabled servers cannot be onboarded to Microsoft Defender for Servers.","Just-in-time VM access requires the machine to have a public IP address assigned."],
+a:1,e:"JIT operates by manipulating network controls that only exist in Azure. An on-premises physical server has no NSG, so there is nothing for JIT to modify. This belongs to a broader pattern: agentless scanning also fails on on-premises Arc machines because it works by snapshotting an Azure managed disk. What Plan 2 does deliver for those servers is File Integrity Monitoring, regulatory compliance coverage, security baselines, and the free ingestion allowance."},
+{lp:9,d:3,t:"ACR",stem:`<p>An AKS cluster's managed identity must pull container images from an Azure Container Registry. It must not push images or modify the registry. A colleague assigns the Reader role and the pulls fail.</p>`,
+ask:"Which role should be assigned instead?",
+o:["AcrPull","AcrPush","Contributor","AcrImageSigner"],
+a:0,e:"Reader is a control-plane role: it shows the registry resource but grants no data-plane permission to pull images. AcrPull is the data-plane role for pulling and the least-privilege fit. This is the same control plane versus data plane split that appears with Key Vault, and ACR built-in roles were reported on the live exam."},
+{lp:9,d:3,t:"AKS",stem:`<p>An application running in AKS reads a database connection string from a Kubernetes Secret. A security review finds that any user with read access to the namespace can retrieve the connection string in plaintext.</p>`,
+ask:"What should you implement?",
+o:["Enable etcd encryption with a Key Vault key and keep using Kubernetes Secrets.","Use the Azure Key Vault provider for Secrets Store CSI Driver with Microsoft Entra Workload ID.","Store the connection string in a ConfigMap with restricted RBAC.","Apply a network policy restricting pod-to-pod traffic in the namespace."],
+a:1,e:"Kubernetes Secrets are base64-encoded, not encrypted, so anyone who can read them reads the value. The CSI driver with Workload Identity means the pod fetches the secret at runtime from Key Vault using its Entra token, and nothing sensitive is stored in the cluster. KMS etcd encryption protects data at rest in etcd but does not stop a user with namespace read access retrieving the value through the API. A ConfigMap is worse, not better."},
+{lp:10,d:4,t:"Defender CSPM",stem:`<p>Your organization has onboarded an AWS account to Microsoft Defender for Cloud. An analyst wants to build a custom graph query identifying AWS EC2 instances that are internet-exposed and have permissions to an S3 bucket containing sensitive data. The Cloud Security Explorer does not offer the expected query options.</p>`,
+ask:"What is the most likely cause?",
+o:["Cloud Security Explorer supports Azure resources only.","The Defender CSPM plan is not enabled; foundational CSPM does not include the graph engine or multicloud queries.","Attack path analysis must be run before Cloud Security Explorer becomes available.","The AWS connector must be scoped to an AWS Organization rather than a single account."],
+a:1,e:"Using Cloud Security Explorer with AWS requires the premium Defender CSPM tier. Foundational CSPM is free and gives inventory, Secure Score, MCSB assessment and basic recommendations, but not the cloud security graph, attack path analysis, or custom multicloud queries. This specific requirement was reported on the live exam."},
+{lp:10,d:4,t:"EASM",stem:`<p>A Defender EASM inventory contains an asset representing a certificate that expired when a marketing site was decommissioned. You must stop the asset appearing in the active inventory while retaining the discovery history.</p>`,
+ask:"What should you do?",
+o:["Delete the asset from the inventory.","Change the asset's state to Dismissed.","Remove the seed that discovered the asset.","Change the asset's state to Candidate."],
+a:1,e:"EASM assets have states — Approved inventory, Candidate, Dependency, Requires investigation, Monitor only, and Dismissed — and you change state rather than delete. Dismissed removes the asset from the active inventory view while preserving discovery history. Candidate is a pre-approval state for newly discovered assets. Removing the seed would affect future discovery broadly rather than this one asset."},
+{lp:10,d:4,t:"Defender plans",stem:`<p>An attacker has compromised a service principal credential and is enumerating subscriptions, listing role assignments, and running a known Azure exploitation toolkit against the management plane. No workload has been accessed yet.</p>`,
+ask:"Which Defender for Cloud plan is designed to detect this activity?",
+o:["Microsoft Defender for Servers","Microsoft Defender for Resource Manager","Microsoft Defender for Key Vault","Microsoft Defender CSPM"],
+a:1,e:"Defender for Resource Manager watches the control plane rather than any workload, detecting suspicious ARM operations, known exploitation toolkits such as MicroBurst and PowerZure, and risky RBAC changes. It is easy to overlook precisely because no workload is involved. Defender CSPM assesses configuration rather than detecting active operations."},
+{lp:11,d:4,t:"Sentinel RBAC",stem:`<p>A partner analyst is a B2B guest in your tenant. She must triage and assign Microsoft Sentinel incidents. After you assign Microsoft Sentinel Responder she can view incidents but cannot assign owners.</p>`,
+ask:"What else must be assigned?",
+o:["Microsoft Sentinel Contributor","Logic App Contributor","The Directory Reader role in Microsoft Entra ID","Microsoft Sentinel Automation Contributor"],
+a:2,e:"Assigning an incident requires resolving directory objects, which guest users cannot do by default. B2B guests therefore need both Directory Reader in Entra ID and Microsoft Sentinel Responder. This combination was reported on the live exam. Sentinel Contributor grants more than needed and still would not resolve the directory limitation."},
+{lp:11,d:4,t:"Sentinel content",stem:`<p>An engineer installs several Content hub solutions for third-party firewall and identity products. Data is arriving in the expected tables, but no incidents are being created and the team assumes the solutions are broken.</p>`,
+ask:"What is the most likely explanation?",
+o:["Analytics rules must be created from the solution's rule templates; installing a solution does not enable detections.","Content hub solutions require the Microsoft Sentinel Contributor role to activate.","The workspace must be connected to Microsoft Defender XDR before rules execute.","Solutions only create incidents after a 24-hour baseline learning period."],
+a:0,e:"This is the most common Sentinel deployment mistake. A solution ships connectors, rule templates, workbooks, hunting queries and playbooks, but analytics rules must be actively created from those templates. Teams install a dozen solutions, see nothing fire, and conclude the product is broken."},
+{lp:11,d:4,t:"Sentinel cost",stem:`<p>A high-volume firewall log source is driving unacceptable Sentinel ingestion costs. Roughly 70 percent of the records are informational and are never used in detections or investigations. The remaining records must retain full fidelity and continue to trigger analytics rules.</p>`,
+ask:"What is the most effective approach?",
+o:["Move the table to the data lake tier.","Apply an ingestion-time transformation in the data collection rule to filter out the informational records.","Reduce the workspace retention period to 30 days.","Switch the workspace to a commitment tier."],
+a:1,e:"DCR transformations filter, drop columns, or enrich at ingestion time and are the primary cost-control lever, because you stop paying for data you never wanted. Moving the whole table to the lake tier would break the analytics rules on the records you need. Reducing retention affects storage, not ingestion, which is the larger cost here. A commitment tier discounts volume but does not reduce it."},
+{lp:11,d:4,t:"Sentinel collection",stem:`<p>Security appliances forward logs in Common Event Format to a Linux forwarder running the Azure Monitor Agent. An analyst writes a KQL query against the Syslog table and finds none of the appliance data.</p>`,
+ask:"Which table contains the data?",
+o:["SecurityEvent","CommonSecurityLog","Event","AzureDiagnostics"],
+a:1,e:"CEF messages land in CommonSecurityLog, where the structured key-value format is parsed into named columns such as DeviceVendor, DeviceProduct, SourceIP and DestinationIP. Plain syslog lands in Syslog as largely unparsed text. SecurityEvent holds Windows Security events collected via AMA, and the Event table typically holds other Windows channels such as Sysmon."},
+{lp:11,d:4,t:"Sentinel retention",stem:`<p>To reduce cost you plan to move a high-volume DNS log table from the Analytics tier to the Data lake tier. Several scheduled analytics rules currently run against that table.</p>`,
+ask:"What should you expect, and what mitigates it?",
+o:["Nothing changes; analytics rules run against both tiers.","The scheduled analytics rules will stop working; summary rules can aggregate lake data into an Analytics-tier table so detections continue on the summarized form.","Total retention drops to 90 days; extending interactive retention restores it.","Data older than 30 days is deleted; enabling archive prevents this."],
+a:1,e:"The data lake tier is not available for real-time analytics, hunting or workbooks, so moving a table there breaks anything scheduled against it — the platform warns you before the change. Summary rules are the standard mitigation, aggregating lake data into a small Analytics-tier table so detection survives on the summarized data. Total retention actually extends up to 12 years rather than dropping."},
+{lp:12,d:4,t:"Security Copilot",stem:`<p>An analyst asks Microsoft Security Copilot to summarize a Microsoft Sentinel incident. Copilot responds that it cannot find the incident, although the incident exists and a colleague can summarize it successfully.</p>`,
+ask:"What is the most likely cause?",
+o:["The Sentinel plugin has not been installed in the workspace.","Security Copilot operates as the signed-in user, and this analyst lacks the required Microsoft Sentinel role.","The analyst's workspace has insufficient Security Compute Units.","Incident summarization requires the Copilot Owner role."],
+a:1,e:"Security Copilot always operates as the signed-in user and plugins run with that user's permissions, so it cannot surface data the user cannot already access. It does not escalate privilege — it is a reasoning layer over existing access. Since a colleague can summarize the same incident, the plugin is installed and functioning; the difference is permissions."},
+{lp:12,d:4,t:"Security Copilot",stem:`<p>You are documenting Microsoft Security Copilot for your team. You must describe the component that composes multiple capabilities together to answer a single user prompt.</p>`,
+ask:"Which term describes this component?",
+o:["Plugin","Orchestrator","Promptbook","Session"],
+a:1,e:"The orchestrator is Copilot's system for composing capabilities together to answer a prompt. A plugin is a collection of capabilities provided by a particular resource. A capability, sometimes called a skill, is a function Copilot uses to solve part of a problem. A session is a conversation within which Copilot maintains context, and a promptbook is a saved sequence of prompts."},
+{lp:12,d:4,t:"Security Copilot",stem:`<p>You provision a Security Copilot workspace. During a review you find that every user in the tenant can access Copilot and create promptbooks.</p>`,
+ask:"What is the most likely cause?",
+o:["Global Administrators are automatically Copilot Contributors.","The Everyone group is added as Copilot Contributor by default.","Copilot Contributor is granted implicitly by any Microsoft Defender XDR role.","Workspace-level plugin settings default to allowing all users."],
+a:1,e:"By default the Everyone group is added as Copilot Contributor, and replacing it with scoped security groups is the first hardening step after provisioning. Separately, Entra Global Administrator and Security Administrator are Copilot Owners by default. Contributors can use Copilot and create and publish promptbooks and custom plugins; Owners manage settings, capacity, plugins and role assignments."},
+{lp:11,d:4,t:"Sentinel automation",stem:`<p>An automation rule is configured to run a playbook when an incident is created. The rule fires according to the run history, but the playbook never executes.</p>`,
+ask:"What is the most likely cause?",
+o:["The Microsoft Sentinel service principal lacks the Microsoft Sentinel Automation Contributor role on the playbook's resource group.","The playbook uses the incident trigger instead of the alert trigger.","Automation rules cannot invoke playbooks; only analytics rules can.","The playbook is a Standard logic app rather than Consumption."],
+a:0,e:"Sentinel must be granted Microsoft Sentinel Automation Contributor on the resource group containing the playbook in order to run it. That role is assigned to the Sentinel service principal, not to human users. The incident trigger is correct for a playbook invoked by an automation rule, and both Consumption and Standard logic apps are supported."},
+// ===== LP1 =====
+{lp:1,d:1,t:"Auth methods",stem:"",ask:"Which authentication method is NOT considered phishing-resistant?",
+o:["FIDO2 security key","Windows Hello for Business","Microsoft Authenticator push with number matching","Certificate-based authentication"],
+a:2,e:"Number matching hardens push against MFA fatigue attacks, but push is still defeated by adversary-in-the-middle proxying: the user approves a legitimate prompt while the attacker captures the session token. Phishing-resistant methods bind the credential cryptographically to the legitimate domain, so the browser won't release it to a proxy. Those are FIDO2, Windows Hello for Business, and certificate-based authentication."},
+{lp:1,d:1,t:"Auth methods",stem:"",ask:"A new employee must register a FIDO2 security key but has no existing credential. What should you issue?",
+o:["A Temporary Access Pass","A one-time SMS code","An OATH hardware token","A self-service password reset link"],
+a:0,e:"TAP solves the passwordless bootstrap problem: you can't require a FIDO2 key to register a FIDO2 key. It's a time-limited passcode, issuable as one-time or multi-use, that gets a new hire from nothing to a registered security key without ever setting a password."},
+{lp:1,d:1,t:"Auth methods",stem:"",ask:"Which built-in authentication strength includes FIDO2, Windows Hello for Business, and certificate-based authentication only?",
+o:["Multifactor authentication","Passwordless MFA","Phishing-resistant MFA","Conditional Access baseline"],
+a:2,e:"There are three built-in strengths. Multifactor authentication accepts any MFA combination. Passwordless MFA covers methods with no password, including Authenticator passwordless phone sign-in. Phishing-resistant MFA is the narrowest, covering FIDO2, WHfB and CBA. You can also build custom strengths."},
+{lp:1,d:1,t:"PIM",stem:"",ask:"In PIM, what is the difference between an eligible and an active assignment?",
+o:["Eligible assignments expire automatically; active assignments never expire.","Eligible assignments require the user to activate before use; active assignments grant standing access.","Eligible assignments apply to Entra roles only; active assignments apply to Azure resource roles.","Eligible assignments require approval; active assignments require MFA."],
+a:1,e:"Eligible means the user must activate before the role takes effect — this is what just-in-time means. Active means standing access without an activation step. Both can be permanent or time-bound. Permanent eligible is a reasonable steady state; permanent active is what you're trying to eliminate."},
+{lp:1,d:1,t:"PIM",stem:"",ask:"If no approver is specified in a PIM role setting that requires approval, who approves activation requests?",
+o:["Global Administrators","Privileged Role Administrators","The requesting user's manager","Security Administrators"],
+a:1,e:"Privileged Role Administrators approve by default when no approver is named. That role also manages PIM settings themselves, which is a common exam distractor against Global Administrator."},
+{lp:1,d:1,t:"PIM",stem:"",ask:"Which PIM capability identifies standing Global Administrators so they can be converted to eligible assignments?",
+o:["Access reviews","Discovery and insights","Alerts","Resource audit"],
+a:1,e:"Discovery and insights surfaces standing privilege and unused roles with one-click conversion to eligible, which is how you actually roll PIM out rather than guessing. Access reviews are recurring attestation of existing assignments, and alerts flag conditions such as too many global administrators."},
+{lp:1,d:1,t:"Agent plugins",stem:"",ask:"An API plugin for a declarative agent must ensure the API can enforce per-user authorization. Which authentication approach is required?",
+o:["API key passed as a custom header","API key passed as a JWT bearer token","OAuth 2.0 using the authorization code flow","Anonymous access with IP allowlisting"],
+a:2,e:"An API key identifies the calling application only — every user calling with the same key has identical permissions, so the API cannot enforce per-user authorization. OAuth 2.0 carries the signed-in user's identity and consented scopes, so the API sees who is actually asking and the agent cannot exceed that user's own access. Microsoft also recommends enabling PKCE on the OAuth registration."},
+{lp:1,d:1,t:"Agent plugins",stem:"",ask:"Where are credentials for a declarative agent's API plugin stored?",
+o:["Inline in the plugin manifest","In the secure storage location in Microsoft 365 known as the vault, referenced by entry ID","In an Azure Key Vault referenced by URI","In the Teams app package manifest"],
+a:1,e:"Credentials go into the vault — the secure storage location in Microsoft 365 — and the plugin manifest references only the vault entry ID. A practical consequence worth remembering: because the plugin holds only the ID, you can update the client secret without redeploying the plugin. In production an administrator typically registers the OAuth information and hands the developer the entry ID."},
+// ===== LP2 =====
+{lp:2,d:1,t:"Key Vault",stem:"",ask:"Which Key Vault setting, once enabled, cannot be turned off?",
+o:["Soft delete","Purge protection","Azure RBAC permission model","Private endpoint"],
+a:1,e:"Purge protection is irreversible by design. During the retention window nobody — not a subscription Owner, not Microsoft support — can permanently purge the vault or its objects, which is what makes it ransomware and insider protection. Soft delete is always on and also cannot be disabled, but its retention period is configurable from 7 to 90 days."},
+{lp:2,d:1,t:"Key Vault",stem:"",ask:"Which role lets an application read secret values but not manage the vault?",
+o:["Key Vault Reader","Key Vault Secrets User","Key Vault Contributor","Key Vault Administrator"],
+a:1,e:"Key Vault Secrets User is the data-plane role for reading secret contents and is what you assign to an application's managed identity. Key Vault Reader sees metadata only, explicitly not secret values. Key Vault Contributor manages the vault resource but has no data-plane access by default — though it can grant itself some, which is why it's sensitive."},
+{lp:2,d:1,t:"Key Vault",stem:"",ask:"Which Key Vault tier provides FIPS 140-2 Level 3 validation with single-tenant HSMs?",
+o:["Standard","Premium","Managed HSM","Premium with purge protection"],
+a:2,e:"Premium gives HSM-backed keys at FIPS 140-2 Level 2 in a multi-tenant service. Managed HSM is a separate offering: single-tenant, Level 3, with its own local RBAC model, a security domain, and designated administrators. A question specifying Level 3 or full administrative isolation from Microsoft means Managed HSM."},
+{lp:2,d:1,t:"Key Vault",stem:"",ask:"Why must a customer-managed key be referenced by a versionless URI for automatic rotation to work?",
+o:["Versioned URIs are not supported by Azure services.","A versioned URI pins the service to that specific version, so rotation has no effect.","Versionless URIs enable soft delete on the key.","Rotation policies only apply to secrets, not keys."],
+a:1,e:"A URI without a version resolves to whatever is current, so rotation is picked up automatically. Pin the version and the consuming service keeps using the old key indefinitely — rotation runs but nothing changes. Note also that keys support automated rotation policies while secrets do not; secret rotation is built with Event Grid plus a Function or Logic App."},
+{lp:2,d:1,t:"Key Vault",stem:"",ask:"Which Event Grid event would you use to trigger automated secret rotation before expiry?",
+o:["SecretNewVersionCreated","SecretNearExpiry","VaultAccessPolicyChanged","SecretExpired"],
+a:1,e:"SecretNearExpiry fires ahead of expiry, giving automation time to rotate before anything breaks. SecretExpired fires after the fact, which is already an outage. Key Vault also publishes CertificateNearExpiry, KeyNearExpiry, their expired counterparts, and VaultAccessPolicyChanged."},
+{lp:2,d:1,t:"Key Vault",stem:"",ask:"A certificate object in Key Vault creates which three addressable items?",
+o:["A certificate, a key, and a secret","A certificate, a policy, and a thumbprint","A certificate, an issuer, and a contact","A certificate, a key, and a rotation policy"],
+a:0,e:"One certificate object produces a certificate, a key, and a secret — where the secret holds the PFX including the private key. That matters for least privilege: anyone with Get-secret permission on that object effectively obtains the private key."},
+// ===== LP3 =====
+{lp:3,d:1,t:"Azure Policy",stem:"",ask:"Which policy effect blocks a specific operation such as delete, rather than blocking resource creation?",
+o:["Deny","DenyAction","Modify","Disabled"],
+a:1,e:"DenyAction blocks a named action, most commonly delete, and is the scalable code-managed alternative to resource locks across many subscriptions. Deny blocks non-compliant create and update requests rather than a specific operation on an existing compliant resource."},
+{lp:3,d:1,t:"Azure Policy",stem:"",ask:"How often does Azure Policy run its standard compliance evaluation cycle?",
+o:["Every hour","Approximately every 24 hours","Every 7 days","Only on resource create or update"],
+a:1,e:"Evaluation triggers on resource create or update, on assignment change, and on a roughly 24-hour compliance scan cycle. You can force one on demand with Start-AzPolicyComplianceScan, which is useful when you've just remediated and don't want to wait."},
+{lp:3,d:1,t:"Azure Policy",stem:"",ask:"What are aliases used for in a custom policy definition?",
+o:["To give the definition a friendly display name","To reach specific properties of a resource type in the policy rule","To reference other policy definitions in an initiative","To map the definition to a regulatory standard"],
+a:1,e:"Aliases expose resource properties to the policy engine — for example Microsoft.Storage/storageAccounts/allowBlobPublicAccess. Without the right alias you cannot write a rule against the property you care about. Store custom definitions at management group scope, since a definition can only be assigned at or below where it's defined."},
+{lp:3,d:1,t:"Resource locks",stem:"",ask:"Which operation commonly breaks under a ReadOnly lock despite being a read-like action?",
+o:["Viewing resource tags","Listing storage account keys","Reading blob contents","Viewing the activity log"],
+a:1,e:"Listing storage account keys is implemented as a POST operation, so a ReadOnly lock blocks it. Other casualties include starting and stopping VMs, VM backup, App Service scaling, and Key Vault key rotation. Locks also apply to the control plane only — a ReadOnly lock does not stop blob writes. In practice ReadOnly locks cause more outages than they prevent."},
+{lp:3,d:1,t:"Resource locks",stem:"",ask:"Two locks apply to a resource: a Delete lock on the resource and a ReadOnly lock on its resource group. What is the effective result?",
+o:["Delete lock, because resource-level locks are more specific","ReadOnly, because the most restrictive lock in the chain wins","Both are ignored due to conflict","The lock applied most recently takes effect"],
+a:1,e:"Locks inherit downward and the most restrictive lock in the chain wins, so ReadOnly on the resource group overrides the Delete lock beneath it. There is no precedence by specificity or recency."},
+{lp:3,d:1,t:"RBAC",stem:"",ask:"What is the maximum number of role assignments supported per Azure subscription?",
+o:["500","2,000","4,000","5,000"],
+a:2,e:"4,000 role assignments per subscription, and 500 per management group. Separately, 5,000 custom role definitions per tenant. Hitting the assignment limit is a real driver toward group-based assignment and ABAC conditions rather than individual assignments."},
+{lp:3,d:1,t:"RBAC",stem:"",ask:"Which feature lets you scope Storage Blob Data Reader to a single container without creating many role assignments?",
+o:["A custom role with a narrower AssignableScopes","An ABAC condition on the role assignment","An administrative unit","A deny assignment"],
+a:1,e:"ABAC conditions attach to a data-plane role assignment and test resource attributes — for example the container name, or blob index tags. That is precisely the problem they solve: scoping without multiplying assignments. AssignableScopes controls where a custom role can be assigned, not which containers it reaches."},
+{lp:3,d:1,t:"IaC",stem:"",ask:"Which Defender for Cloud feature maps a misconfigured running resource back to the IaC template that produced it?",
+o:["Attack path analysis","Code-to-cloud contextualization","Regulatory compliance dashboard","Governance rules"],
+a:1,e:"Code-to-cloud contextualization closes the loop: fixing the running resource just gets overwritten by the next deployment, so you need to know which template and repository produced it. This is part of Defender CSPM's DevOps security, alongside pull request annotations and repository secret scanning."},
+// ===== LP4 =====
+{lp:4,d:2,t:"Storage",stem:"",ask:"Which storage redundancy option protects against a full region outage?",
+o:["LRS","ZRS","GRS","Premium block blob"],
+a:2,e:"LRS keeps three copies in one datacenter, ZRS spreads across availability zones within one region, and GRS adds a replica in a paired secondary region. Worth remembering the security framing: redundancy protects against infrastructure failure, not deletion or corruption — geo-replication faithfully replicates a ransomware encryption event. Soft delete, versioning and immutability are the controls for that."},
+{lp:4,d:2,t:"Storage",stem:"",ask:"What is the maximum validity period of a user delegation SAS?",
+o:["1 hour","24 hours","7 days","90 days"],
+a:2,e:"Seven days, blob service only. A user delegation SAS is signed with an Entra credential rather than the account key, so it's revocable by revoking the delegation key and the audit trail shows whose delegation created it. It's the recommended SAS type when you must hand out a URL."},
+{lp:4,d:2,t:"Storage",stem:"",ask:"How many stored access policies can a single blob container hold?",
+o:["1","5","10","Unlimited"],
+a:1,e:"Five per container. Because a SAS bound to a policy references it rather than embedding its terms, deleting or modifying the policy immediately invalidates every SAS bound to it without rotating account keys. That revocation capability is the entire reason stored access policies exist."},
+{lp:4,d:2,t:"Storage",stem:"",ask:"Which immutable storage option can only be extended, never shortened, once locked?",
+o:["Legal hold","Time-based retention policy","Blob soft delete","Point-in-time restore"],
+a:1,e:"A locked time-based retention policy can be extended a maximum of five times and never shortened. A legal hold is tag-based and removed by an authorized user rather than expiring. Both are genuine ransomware protection, since encrypt-in-place is impossible against immutable blobs."},
+{lp:4,d:2,t:"Storage",stem:"",ask:"Which three features must all be enabled for point-in-time restore of block blobs?",
+o:["Versioning, change feed, and soft delete","Versioning, immutability, and encryption scopes","Change feed, legal hold, and infrastructure encryption","Soft delete, GRS, and object replication"],
+a:0,e:"Point-in-time restore depends on blob versioning, the change feed, and blob soft delete together. Miss any one and the feature cannot be enabled."},
+{lp:4,d:2,t:"Storage",stem:"",ask:"Which storage account setting can only be enabled at creation time?",
+o:["Infrastructure encryption","Blob versioning","Minimum TLS version","Allow blob anonymous access"],
+a:0,e:"Infrastructure encryption — the second, independent layer of encryption — must be chosen when the account is created and cannot be added later. The others are all changeable after the fact."},
+// ===== LP5 =====
+{lp:5,d:2,t:"SQL",stem:"",ask:"What does the Azure SQL server firewall rule 0.0.0.0 to 0.0.0.0 actually permit?",
+o:["Only resources in your own Azure subscription","Resources in any Azure subscription belonging to anyone","All internet traffic","Only Microsoft-managed services"],
+a:1,e:"This is the Allow Azure services and resources to access this server setting, and it is far broader than people assume: it permits Azure resources belonging to any customer, not just yours. It exists because it's the easy way to make App Service connect, and it's almost never the secure answer."},
+{lp:5,d:2,t:"SQL",stem:"",ask:"Which Azure SQL connection policy requires ports 11000 to 11999 to be reachable?",
+o:["Proxy","Redirect","Default","Managed"],
+a:1,e:"Redirect connects the client straight to the database node for lower latency, but needs that port range open, so it generally only works from inside Azure. Proxy routes everything through the gateway on 1433 at the cost of latency."},
+{lp:5,d:2,t:"SQL",stem:"",ask:"Which Always Encrypted configuration supports equality lookups on an encrypted column?",
+o:["Randomized encryption","Deterministic encryption","Randomized with secure enclaves","Column master key rotation"],
+a:1,e:"Deterministic encryption produces identical ciphertext for identical plaintext, enabling equality comparison but leaking patterns. Randomized is stronger and supports no operations at all — unless you add secure enclaves, which enable range queries, LIKE, and in-place encryption inside a VBS enclave."},
+{lp:5,d:2,t:"SQL",stem:"",ask:"Which SQL audit destination makes the audit trail itself tamper-proof against a database administrator?",
+o:["Log Analytics workspace","Event Hub","Azure Storage with a time-based immutability policy","Local SQL audit file"],
+a:2,e:"Routing audit logs to a storage account with a time-based retention policy means an attacker holding database admin rights cannot erase the evidence of what they did. This pairing is the answer whenever a requirement says audit records must not be altered or deleted."},
+// ===== LP6 =====
+{lp:6,d:2,t:"NSG",stem:"",ask:"Which default NSG rule allows all outbound internet traffic?",
+o:["AllowVnetOutBound at priority 65000","AllowInternetOutBound at priority 65001","DenyAllOutBound at priority 65500","AllowAzureLoadBalancerInBound at priority 65001"],
+a:1,e:"AllowInternetOutBound at 65001 is why every VM can reach the internet by default. Alongside it, AllowVNetInBound means everything inside the VNet can talk to everything else. Both defaults are wide open, and both are usually what you're being asked to restrict."},
+{lp:6,d:2,t:"ASG",stem:"",ask:"What is the main constraint on application security groups?",
+o:["They can only contain up to 10 network interfaces","All network interfaces in an ASG must be in the same virtual network","They cannot be used as a destination, only a source","They require Azure Firewall Premium"],
+a:1,e:"All NICs in an ASG must belong to the same virtual network, and if you use ASGs on both sides of a rule they must share that VNet. ASGs solve the problem that IP-based rules rot immediately in an autoscaling environment — the rule survives IP changes and redeployment."},
+{lp:6,d:2,t:"AVNM",stem:"",ask:"Which AVNM security admin rule action causes NSG evaluation to be skipped entirely?",
+o:["Allow","Deny","Always Allow","Bypass"],
+a:2,e:"Allow permits the traffic but it still goes through subsequent NSG evaluation. Always Allow permits it and skips NSGs completely, which is how you guarantee required traffic such as monitoring agents can't be accidentally blocked by an application team. Deny blocks outright and NSGs are never consulted."},
+{lp:6,d:2,t:"AVNM",stem:"",ask:"After creating an AVNM connectivity or security configuration, what additional step is required?",
+o:["Assign an Azure Policy to enforce it","Deploy the configuration to specific regions","Create a network group for each subnet","Enable Azure Firewall on the hub"],
+a:1,e:"Creating a configuration does nothing on its own — it must be deployed to the regions where you want it to take effect. That two-step nature catches people who assume creation equals enforcement."},
+{lp:6,d:2,t:"Azure Firewall",stem:"",ask:"What must be enabled to use FQDNs in Azure Firewall network rules?",
+o:["Threat intelligence filtering","DNS proxy","IDPS","TLS inspection"],
+a:1,e:"DNS proxy lets the firewall resolve names itself, so it can correlate the FQDN to the IP the client resolved. Without it, FQDNs work in application rules but not in network rules. Point your VNet DNS at the firewall's private IP."},
+{lp:6,d:2,t:"Azure Firewall",stem:"",ask:"What does Azure Firewall Premium TLS inspection require in addition to the Premium SKU?",
+o:["An intermediate CA certificate in Key Vault and a user-assigned managed identity","A public certificate from a trusted root CA","A Standard Load Balancer in front of the firewall","DNS proxy enabled on the VNet"],
+a:0,e:"The firewall needs an intermediate CA certificate stored in Key Vault, plus a user-assigned managed identity with Get permission on it, and clients must trust that CA. Without TLS inspection, Premium's URL filtering and IDPS only see the SNI hostname."},
+{lp:6,d:2,t:"Azure Firewall",stem:"",ask:"Which Azure Firewall feature runs before all rule collections and can block traffic despite an allow rule?",
+o:["IDPS in Alert and Deny mode","Threat intelligence-based filtering","Web categories","Rule collection group priority"],
+a:1,e:"Threat intelligence filtering evaluates before any rules and, set to Alert and deny, blocks known-malicious FQDNs and IPs regardless of what your allow rules say. It costs nothing to enable and stops traffic to known command-and-control infrastructure."},
+{lp:6,d:2,t:"Azure Firewall",stem:"",ask:"What is the minimum subnet size for AzureFirewallSubnet?",
+o:["/29","/27","/26","/24"],
+a:2,e:"/26 minimum, and the subnet must be named exactly AzureFirewallSubnet. Forced tunneling additionally requires a separate AzureFirewallManagementSubnet so management traffic isn't sent on-premises by your UDR."},
+{lp:6,d:2,t:"Private Access",stem:"",ask:"What is the key architectural advantage of Entra Private Access connectors over a traditional VPN concentrator?",
+o:["Connectors make outbound-only connections, so no inbound firewall rules or DMZ are needed","Connectors terminate TLS at the network edge","Connectors replace the need for Conditional Access","Connectors provide Layer 2 network extension"],
+a:0,e:"Private Network connectors dial out, so there is nothing to publish inbound. The deeper shift is that users get access to specific applications rather than a network — a VPN grants network-level reach, which is how lateral movement happens after one credential compromise. Each application segment can carry its own Conditional Access policy."},
+// ===== LP7 =====
+{lp:7,d:3,t:"Agent ID",stem:"",ask:"Which authentication flow do autonomous agents use?",
+o:["On-behalf-of token exchange","OAuth 2.0 client credentials flow","Device code flow","SAML assertion flow"],
+a:1,e:"Autonomous agents authenticate directly as their service principal using client credentials, presenting a certificate, managed identity token, or client secret. There is no user in the flow, which is exactly why interactive controls like MFA and device compliance cannot apply to them."},
+{lp:7,d:3,t:"Agent ID",stem:"",ask:"Which Conditional Access control CAN be enforced against an autonomous agent identity?",
+o:["Require multifactor authentication","Require device to be marked compliant","Named location conditions","App-enforced session restrictions"],
+a:2,e:"For autonomous agents CA can enforce block sign-in, named location conditions, sign-in frequency restrictions, and risk-based conditions from Entra ID Protection. It cannot enforce MFA, device compliance, or user-based session controls, because there is no user to prompt and no device to evaluate."},
+{lp:7,d:3,t:"Agent ID",stem:"",ask:"An agent operates with its own user-type account and a dedicated mailbox. How should Conditional Access be scoped?",
+o:["To agent identities under the Agents assignment","To the user account representing the agent","To the agent identity blueprint","Conditional Access does not apply to this pattern"],
+a:1,e:"This is the third access pattern — the digital worker. The agent authenticates as a user, so CA targets that user account with standard user-targeted configuration. Note that the non-interactive limits still apply: no MFA prompt, no device compliance, because nobody is sitting there to respond."},
+{lp:7,d:3,t:"Agent ID",stem:"",ask:"Which approach automatically applies a Conditional Access policy to agents created in future without editing the policy?",
+o:["Selecting each agent identity individually","Custom security attributes matched by a policy condition","Assigning the policy to All agent users","Enabling Entra ID Protection"],
+a:1,e:"Attribute-driven targeting uses custom security attributes — for example a DataSensitivity attribute set to Confidential — so the policy automatically covers new agents carrying that value. Blueprint-level targeting achieves the same at the blueprint level. Listing agents individually is explicitly described as operationally unsustainable."},
+{lp:7,d:3,t:"Copilot Studio",stem:"",ask:"Roughly how long does Defender have to allow or block a Copilot Studio tool invocation before the agent proceeds?",
+o:["100 milliseconds","1 second","5 seconds","30 seconds"],
+a:1,e:"About one second. If Defender does not respond in time the agent proceeds — fail-open on latency, fail-secure on decision. That is a deliberate tradeoff so a Defender outage doesn't break every agent in the tenant."},
+{lp:7,d:3,t:"Copilot Studio",stem:"",ask:"Which Copilot Studio agents are supported by real-time protection?",
+o:["All agents including classic agents","Only generative agents using generative orchestration","Only agents published to Microsoft Teams","Only agents with a Power Platform premium license"],
+a:1,e:"Only generative agents using generative orchestration are supported; classic agents are not. Also worth knowing: only agents that have a Microsoft Entra Agent ID appear in the rule selection list, which is the practical reason Agent ID matters operationally."},
+{lp:7,d:3,t:"AI Gateway",stem:"",ask:"Which API Management policy detects jailbreak and prompt injection attempts?",
+o:["llm-token-limit","llm-emit-metric","llm-content-safety","llm-semantic-cache-lookup"],
+a:2,e:"llm-content-safety forwards prompts to Azure AI Content Safety for harmful content blocking and jailbreak or prompt injection detection. It now also covers MCP tool-call arguments, MCP response text and A2A payloads. The window-size and window-overlap-size parameters handle chunking around Content Safety's 10,000-character limit."},
+{lp:7,d:3,t:"AI Gateway",stem:"",ask:"What backing store does llm-semantic-cache-lookup require?",
+o:["Azure Cosmos DB","Azure Managed Redis or a RediSearch-compatible cache","Azure Cache for Memcached","Azure Table Storage"],
+a:1,e:"Semantic caching uses vector similarity against Azure Managed Redis or another RediSearch-compatible external cache, so semantically similar repeat questions are served without hitting the model."},
+{lp:7,d:3,t:"Foundry guardrails",stem:"",ask:"Azure AI Content Safety content filters evaluate which four harm categories?",
+o:["Hate, sexual, violence, self-harm","Hate, misinformation, violence, privacy","Malware, phishing, hate, violence","Bias, toxicity, violence, self-harm"],
+a:0,e:"Four categories — hate, sexual, violence, self-harm — each with four severity thresholds of safe, low, medium and high, and separate filters for prompts and completions. Custom categories and blocklists cover organization-specific terms."},
+{lp:7,d:3,t:"Defender for Cloud AI",stem:"",ask:"Which Defender for Cloud capability builds an AI bill of materials of models, datasets and endpoints?",
+o:["Defender for AI Services runtime protection","AI security posture management in Defender CSPM","The Data and AI security dashboard","Purview DSPM for AI"],
+a:1,e:"AI-SPM in Defender CSPM discovers AI workloads agentlessly and builds the AI bill of materials, also finding vulnerabilities in generative AI library dependencies such as TensorFlow, PyTorch and LangChain. Remember the split: CSPM is posture and discovery, the Defender for AI Services plan is runtime detection, and both feed the dashboard."},
+{lp:7,d:3,t:"Purview DSPM",stem:"",ask:"Which SharePoint sharing configuration is the primary oversharing indicator to hunt for before a Copilot rollout?",
+o:["Anyone links with expiry","Everyone Except External Users (EEEU)","Specific people links","Company-wide links with view-only access"],
+a:1,e:"EEEU is the default that quietly made content readable by the whole organization. Copilot doesn't create the oversharing, it reveals what was always there. Data access governance reports in SharePoint Advanced Management surface EEEU usage, and Purview data risk assessments highlight the sites driving the most risk."},
+{lp:7,d:3,t:"Agent 365",stem:"",ask:"What does onboarding agents to Microsoft Agent 365 automatically enable?",
+o:["Purview data loss prevention for agents","Security for AI agents in Microsoft Defender, including discovery, posture assessment and threat detection","Conditional Access policies for all agents","Azure API Management AI Gateway"],
+a:1,e:"Agent 365 onboarding automatically turns on Defender's security for AI agents. Agent 365 itself is the M365 admin center surface for agent inventory, registration, lifecycle, Agent Store governance, and activity monitoring — registration is what brings an agent under governance, and unregistered agents are the shadow AI problem."},
+// ===== LP8 =====
+{lp:8,d:3,t:"Trusted launch",stem:"",ask:"Which trusted launch feature is a prerequisite for integrity monitoring?",
+o:["Secure Boot","vTPM","Confidential computing","Host encryption"],
+a:1,e:"Integrity monitoring compares boot measurements against a baseline, and those measurements live in the vTPM, so vTPM must be enabled. Both vTPM and Secure Boot require a Generation 2 VM. BitLocker and Windows Hello for Business inside the guest also depend on vTPM."},
+{lp:8,d:3,t:"Confidential VM",stem:"",ask:"What distinguishes a Confidential VM from trusted launch?",
+o:["Confidential VMs encrypt memory in a hardware TEE, protecting against a compromised host","Confidential VMs add Secure Boot to Generation 1 VMs","Confidential VMs encrypt the temp disk only","Confidential VMs require Azure Disk Encryption"],
+a:0,e:"Different threat models. Trusted launch protects the boot chain against a compromised guest. Confidential VMs use AMD SEV-SNP or Intel TDX to encrypt memory from the hypervisor, protecting against a compromised or untrusted host."},
+{lp:8,d:3,t:"Bastion",stem:"",ask:"Which Azure Bastion SKU is required for session recording?",
+o:["Developer","Basic","Standard","Premium"],
+a:3,e:"Session recording and private-only Bastion are Premium features. Standard adds host scaling, native client support, IP-based connection to non-Azure VMs, shareable links, file transfer and Kerberos. Session recording matters because it satisfies privileged-session audit requirements that would otherwise need third-party PAM tooling."},
+{lp:8,d:3,t:"Bastion",stem:"",ask:"What is the minimum required subnet size for AzureBastionSubnet in most deployments?",
+o:["/29","/28","/27 for Basic, /26 recommended","/24"],
+a:2,e:"/27 is the minimum for Basic, with /26 or larger recommended and required for Premium and for host scaling. The subnet must be named exactly AzureBastionSubnet."},
+{lp:8,d:3,t:"Arc",stem:"",ask:"Which Azure Arc agent configuration restricts which extensions may be installed on a server, even by someone with Azure permissions?",
+o:["azcmagent config set proxy.url","azcmagent config set extensions.allowlist","azcmagent disconnect","azcmagent config set guestconfiguration.enabled"],
+a:1,e:"The extension allowlist gives the server owner local control independent of Azure RBAC, which matters when the server team and the Azure team are different organizations. This is a real privilege concern: an Arc extension runs code as SYSTEM or root, so permission to install extensions is effectively administrative control of the machine."},
+{lp:8,d:3,t:"Arc",stem:"",ask:"Which Defender for Servers Plan 2 capability does NOT work on on-premises Arc-enabled servers?",
+o:["File Integrity Monitoring","Agentless scanning","Security baseline recommendations","Regulatory compliance dashboard"],
+a:1,e:"Agentless scanning works by snapshotting an Azure managed disk, and a physical on-premises server has no such disk. Just-in-time VM access fails for the same class of reason — it manipulates an NSG, which those machines don't have. What Plan 2 does deliver for them is FIM, compliance coverage, security baselines, and the free daily ingestion allowance."},
+{lp:8,d:3,t:"Defender for Servers",stem:"",ask:"Which Defender for Servers plan supports per-resource enablement rather than subscription-level only?",
+o:["Plan 1","Plan 2","Both plans","Neither plan"],
+a:0,e:"Plan 1 can be enabled at subscription or per-resource; Plan 2 is subscription level. Plan 1 covers Defender for Endpoint integration and core vulnerability management. Everything else — JIT, FIM, adaptive application controls, agentless scanning, agentless secrets scanning, the MDVM premium add-on, and the 500 MB/day free ingestion — is Plan 2."},
+{lp:8,d:3,t:"Machine Configuration",stem:"",ask:"What two components must be present on a machine before Azure Machine Configuration policies can evaluate it?",
+o:["The Guest Configuration extension and a system-assigned managed identity","The Azure Monitor Agent and a Data Collection Rule","Defender for Endpoint and the Connected Machine agent","The Custom Script Extension and a user-assigned managed identity"],
+a:0,e:"Both are deployed by the built-in initiative Deploy prerequisites to enable Guest Configuration policies on virtual machines. Machine Configuration runs in AuditIfNotExists mode for auditing or DeployIfNotExists for actual remediation, and works identically on Azure VMs and Arc-enabled servers — which is the point, one baseline across cloud and on-premises."},
+// ===== LP9 =====
+{lp:9,d:3,t:"Containers",stem:"",ask:"Why does patching a container require a rebuild rather than an in-place update?",
+o:["Containers have no package manager","Container images are immutable, so a vulnerability persists until the image is rebuilt","The container runtime blocks writes to /usr","Kubernetes prevents shell access to running pods"],
+a:1,e:"An image is a read-only template built in layers; a container is a running instance of it. The vulnerability sits frozen in the image until someone rebuilds and redeploys, which is exactly why Defender for Containers continuously re-scans registry images as new CVEs are published."},
+{lp:9,d:3,t:"Defender for Containers",stem:"",ask:"Which Defender for Containers component provides runtime threat detection on the cluster?",
+o:["The agentless discovery component","The Defender sensor, an eBPF-based DaemonSet","Azure Policy for Kubernetes","The registry vulnerability scanner"],
+a:1,e:"The Defender sensor detects crypto-mining, web shell activity, exposed dashboards, privileged container creation, suspicious exec and malicious IP connections. Control plane detections come from audit log analysis agentlessly, so you get partial coverage without the sensor. Azure Policy for Kubernetes handles admission control and hardening."},
+{lp:9,d:3,t:"AKS",stem:"",ask:"What is the risk of leaving local accounts enabled on an AKS cluster?",
+o:["Pods can escalate to cluster-admin","The static cluster-admin kubeconfig bypasses Entra ID and Conditional Access entirely","Node autoscaling stops working","Network policies are not enforced"],
+a:1,e:"That kubeconfig is a non-expiring certificate granting full cluster control, invisible to Conditional Access and to your identity governance. Disabling local accounts with --disable-local-accounts is the single highest-value AKS access control."},
+{lp:9,d:3,t:"AKS",stem:"",ask:"What happens to pod-to-pod traffic in an AKS cluster with no network policy configured?",
+o:["All pod-to-pod traffic is denied by default","Every pod can reach every other pod","Traffic is restricted to the same namespace","Traffic is restricted to the same node"],
+a:1,e:"Kubernetes defaults to a flat, fully reachable pod network. Restricting it requires a network policy engine — Azure NPM, Calico, or Cilium — which is the microsegmentation control inside the cluster."},
+{lp:9,d:3,t:"ACR",stem:"",ask:"Why should container images be referenced by digest rather than by tag in a security-sensitive pipeline?",
+o:["Digests are shorter and easier to audit","Tags are mutable pointers and can be repointed to different content after review","Digests enable geo-replication","Tags are not supported in Premium registries"],
+a:1,e:"An attacker with push access can replace a scanned and approved image without changing the tag anyone references. Digests are content-addressed and cannot be repointed. Locking images with --write-enabled false and enabling content trust address the same risk."},
+{lp:9,d:3,t:"App Service",stem:"",ask:"Which App Service surface is commonly left exposed when only the main site's access restrictions are configured?",
+o:["The staging deployment slot","The SCM/Kudu site","The App Service plan","The outbound VNet integration"],
+a:1,e:"Kudu is the deployment and debug console, with filesystem access. Access restrictions have separate rules for the SCM site, with an option to inherit from the main site — and forgetting that leaves an administrative surface open."},
+{lp:9,d:3,t:"WAF",stem:"",ask:"In OWASP CRS 3.x anomaly scoring, what score does a single critical rule match contribute?",
+o:["2","3","4","5"],
+a:3,e:"Critical is 5, error 4, warning 3, notice 2, and the default blocking threshold is 5 — so one critical match blocks but three notices do not. Understanding this is why WAF tuning is about scores and exclusions rather than disabling individual rules, and why you always deploy in Detection mode first."},
+// ===== LP10 =====
+{lp:10,d:4,t:"Defender for Cloud",stem:"",ask:"How does Microsoft Defender for Cloud authenticate to a connected GCP organization?",
+o:["A stored service account key uploaded to Azure","Workload identity federation with a service account","An API key in Key Vault","A username and password pair"],
+a:1,e:"GCP connectors use workload identity federation; AWS connectors use an IAM role with assume-role deployed by CloudFormation. Neither stores a long-lived cloud credential in Azure, which is the same secretless principle that runs through the rest of the exam."},
+{lp:10,d:4,t:"Defender for Cloud",stem:"",ask:"How is Secure Score calculated?",
+o:["A simple percentage of passing recommendations","Per security control, with partial credit based on the ratio of healthy resources","Weighted by resource cost","Based only on high-severity recommendations"],
+a:1,e:"Recommendations are grouped into security controls, each worth a maximum number of points awarded proportionally to healthy resources. Fixing every recommendation in a control earns full points, which is why partial remediation moves the number less than people expect."},
+{lp:10,d:4,t:"Defender for Cloud",stem:"",ask:"Which Defender CSPM feature assigns an owner and a remediation due date to recommendations?",
+o:["Workflow automation","Governance rules","Security standards","Exemptions"],
+a:1,e:"Governance rules assign an owner and due date by scope, with automatic email to the owner and their manager and an overdue status. They address the organizational problem CSPM tools otherwise fail to solve — making resource owners accountable instead of having security chase everyone."},
+{lp:10,d:4,t:"EASM",stem:"",ask:"Which EASM asset state removes an asset from active inventory while preserving discovery history?",
+o:["Candidate","Dependency","Dismissed","Requires investigation"],
+a:2,e:"The states are Approved inventory, Candidate, Dependency, Requires investigation, Monitor only, and Dismissed. You change state rather than delete. Candidate is a pre-approval state for newly discovered assets."},
+{lp:10,d:4,t:"EASM",stem:"",ask:"What does EASM discovery start from?",
+o:["Azure subscription resource inventory","Seeds such as domains, IP blocks, ASNs and WHOIS contacts","Defender for Endpoint device inventory","Microsoft Entra application registrations"],
+a:1,e:"EASM works outside-in with no access to your environment, expanding recursively from seeds. That's what lets it find the marketing site a business unit spun up or the acquired company's forgotten infrastructure. One line: EASM finds the unknown, Defender for Cloud secures the known."},
+{lp:10,d:4,t:"Defender for Cloud",stem:"",ask:"Which standard is applied to every Azure subscription by default and drives Secure Score?",
+o:["CIS Azure Foundations Benchmark","Microsoft Cloud Security Benchmark","NIST SP 800-53 Rev. 5","ISO/IEC 27001"],
+a:1,e:"MCSB applies by default and drives Secure Score. Other standards are added per subscription, management group or cloud connector — and adding one at a management group cascades to all child subscriptions, which is the scalable way to apply it."},
+// ===== LP11 =====
+{lp:11,d:4,t:"Sentinel",stem:"",ask:"Which Sentinel role allows a user to run playbooks manually but not create them?",
+o:["Microsoft Sentinel Responder","Microsoft Sentinel Playbook Operator","Microsoft Sentinel Automation Contributor","Logic App Contributor"],
+a:1,e:"Playbook Operator lists, views and manually runs playbooks. Automation Contributor is assigned to the Sentinel service principal so Sentinel itself can run them and is not intended for humans. Creating and editing playbooks needs Logic App Contributor alongside Sentinel Contributor."},
+{lp:11,d:4,t:"Sentinel",stem:"",ask:"On which port does a syslog daemon forward messages to the Azure Monitor Agent on a Linux log forwarder?",
+o:["514","28330","443","5140"],
+a:1,e:"The daemon listens on TCP/UDP 514 for inbound device traffic and forwards to AMA on 28330. The Microsoft installer script configures both ends."},
+{lp:11,d:4,t:"Sentinel",stem:"",ask:"Sysmon events collected through the Windows Forwarded Events connector typically land in which table?",
+o:["SecurityEvent","CommonSecurityLog","Event","Syslog"],
+a:2,e:"Sysmon writes to the Microsoft-Windows-Sysmon/Operational channel and typically lands in the Event table rather than SecurityEvent. Sysmon is worth collecting because it gives process creation with full command line and hashes, network connections attributed to the initiating process, image loads, and registry changes — far richer than the native Security log."},
+{lp:11,d:4,t:"Sentinel",stem:"",ask:"What must a custom log table name end with?",
+o:["_Custom","_CL","_Log","_Table"],
+a:1,e:"Custom tables end in _CL. They're created through the Logs Ingestion API with a DCR and a Data Collection Endpoint, including a transformation and a mapped TimeGenerated column. The Logs Ingestion API replaces the deprecated HTTP Data Collector API."},
+{lp:11,d:4,t:"Sentinel",stem:"",ask:"Which Sentinel feature lets you keep detections working after moving a table to the data lake tier?",
+o:["Watchlists","Summary rules","Archive tier","Cross-workspace queries"],
+a:1,e:"Summary rules aggregate lake data into a small Analytics-tier table so scheduled detections continue on the summarized form. Without them, moving a table to lake-only breaks every analytics rule and hunting query against it."},
+{lp:11,d:4,t:"Sentinel",stem:"",ask:"How long are Defender XDR threat-hunting tables retained in the Analytics tier at no cost?",
+o:["7 days","30 days","90 days","180 days"],
+a:1,e:"30 days free, extendable to 90 days where ingestion cost applies but storage is free, and beyond that with storage cost. Tables marked Type: XDR with Tier: XDR default cannot be moved to the data lake at all."},
+{lp:11,d:4,t:"Sentinel",stem:"",ask:"What is the priority range for Sentinel automation rules?",
+o:["0 to 99","1 to 99","100 to 4096","1 to 1000"],
+a:1,e:"1 to 99, with lower numbers running first. Automation rules can also be set to expire on a date, which is useful for maintenance windows or temporarily suppressing known noise without deleting the rule."},
+{lp:11,d:4,t:"Sentinel",stem:"",ask:"Which Microsoft connector is notably NOT free to ingest into Sentinel?",
+o:["Azure Activity","Microsoft Defender XDR incidents","Microsoft Entra ID sign-in and audit logs","Microsoft Defender for Cloud alerts"],
+a:2,e:"Entra ID sign-in and audit logs carry ingestion cost, and they're simultaneously among the highest-volume and most valuable sources — a common budgeting surprise. Most other Microsoft first-party connectors are free."},
+// ===== LP12 =====
+{lp:12,d:4,t:"Security Copilot",stem:"",ask:"In Security Copilot terminology, what is a capability?",
+o:["A collection of plugins from one resource","A function Copilot uses to solve part of a problem, sometimes called a skill","A saved sequence of prompts","A separate work environment within the tenant"],
+a:1,e:"A capability, also called a skill, is a function Copilot uses to solve part of a problem. A plugin is a collection of capabilities provided by a particular resource, and the orchestrator composes capabilities together to answer one prompt. Those relationships are exactly the kind of definitional material a knowledge check tests."},
+{lp:12,d:4,t:"Security Copilot",stem:"",ask:"Which term describes a conversation in which Copilot maintains context across multiple prompts?",
+o:["Promptbook","Session","Workspace","Orchestration"],
+a:1,e:"A session is a particular conversation within Copilot, and Copilot maintains context within it. A prompt is a specific statement or question within a session, entered in the prompt bar."},
+{lp:12,d:4,t:"Security Copilot",stem:"",ask:"What are the four elements of an effective prompt?",
+o:["Goal, context, expectations, source","Question, scope, format, plugin","Intent, data, output, audience","Objective, constraint, source, verification"],
+a:0,e:"Goal is the specific security-related information you need; context is why you need it or how you'll use it; expectations is the format or target audience; source is the known information, data sources or plugins Copilot should use."},
+{lp:12,d:4,t:"Security Copilot",stem:"",ask:"Which prompting guidance does Microsoft give for handling exceptions?",
+o:["List what Copilot must not do","Give positive instructions describing what to do for exceptions","Avoid mentioning exceptions entirely","Use a separate prompt for each exception"],
+a:1,e:"Copilot is geared toward action, so telling it what to do is more productive than telling it what not to do. Microsoft also recommends being specific and concise, iterating across prompts, providing context to narrow the data source, and addressing Copilot directly as You."},
+{lp:12,d:4,t:"Security Copilot",stem:"",ask:"What is the relationship between Security Copilot workspaces and capacity?",
+o:["All workspaces in a tenant share one capacity","Each workspace must have its own capacity","Capacity is only required for the default workspace","Capacity is assigned per user, not per workspace"],
+a:1,e:"Workspaces are powered by capacities and each workspace must have its own. That is what makes workspaces useful for mapping costs to team budgets, and for storing session data according to geo-specific regulations. The module's analogy is a house with rooms: the tenant is the house, each workspace a room."},
+{lp:12,d:4,t:"Security Copilot",stem:"",ask:"What is the minimum number of provisioned SCUs per tenant, and how are they billed?",
+o:["1 SCU, billed hourly","1 SCU, billed monthly","3 SCUs, billed hourly","10 SCUs, billed monthly"],
+a:0,e:"Minimum one provisioned SCU per tenant, billed hourly and adjustable per hour. Overage SCUs can be set from 0 to 999 and bill only when used. Steady state for most organizations is roughly one to four SCUs with bursts."}
+
+];const LPNAME={1:"Secure access with Microsoft Entra",2:"Secure Azure Key Vault",
+3:"Governance and regulatory compliance",4:"Security for Azure Storage",
+5:"Security for Azure SQL databases",6:"Network security controls",
+7:"Security for AI",8:"Servers and virtual machines",
+9:"Azure application platform services",10:"Posture with Defender for Cloud",
+11:"Activity and event collection in Sentinel",12:"Deploy and operate Security Copilot"};
+const KEY="sc500bank_v1";
+let store={seen:{},missed:{},shuffle:true};
+let set=[], idx=0, locked=false, sessionRight=0, sessionDone=0, sessionMissed=[];
+
+const $=id=>document.getElementById(id);
+const show=id=>{["home","quiz","done"].forEach(x=>$(x).classList.add("hide"));
+  $(id).classList.remove("hide");window.scrollTo(0,0);};
+function save(){try{localStorage.setItem(KEY,JSON.stringify(store));}catch(e){}}
+function load(){try{const r=localStorage.getItem(KEY);if(r)store=Object.assign(store,JSON.parse(r));}catch(e){}}
+const multi=q=>q.multi===true;
+function qid(q){return q.lp+"|"+q.t+"|"+q.ask.slice(0,40);}
+
+function buildMenu(){
+  const box=$("lplist");box.innerHTML="";
+  for(let lp=1;lp<=12;lp++){
+    const qs=BANK.filter(q=>q.lp===lp);
+    if(!qs.length)continue;
+    const ids=qs.map(qid);
+    const seen=ids.filter(i=>store.seen[i]!==undefined).length;
+    const right=ids.filter(i=>store.seen[i]===true).length;
+    const d=document.createElement("div");d.className="lp";
+    d.innerHTML='<div><b>LP'+lp+' &mdash; '+LPNAME[lp]+'</b><div class="n">'+qs.length+' questions</div></div>'+
+      '<div class="stat" style="text-align:right">'+(seen?right+"/"+seen+" correct":"not started")+'</div>';
+    d.onclick=()=>startSet(qs,"LP"+lp+" — "+LPNAME[lp]);
+    box.appendChild(d);
+  }
+}
+function shuffleArr(a){a=a.slice();
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+  return a;}
+function startSet(qs,name){
+  if(!qs.length){alert("Nothing to practice here yet.");return;}
+  set=store.shuffle?shuffleArr(qs):qs.slice();
+  idx=0;sessionRight=0;sessionDone=0;sessionMissed=[];
+  $("setName").textContent=name;show("quiz");render();
+}
+function render(){
+  locked=false;
+  const q=set[idx];
+  $("pos").textContent=(idx+1)+" / "+set.length;
+  $("pbar").style.width=((idx)/set.length*100)+"%";
+  $("running").textContent=sessionDone?sessionRight+"/"+sessionDone+" correct":"";
+  $("qmeta").textContent="LP"+q.lp+" · Domain "+q.d+" · "+q.t+(multi(q)?" · choose all that apply":"");
+  $("stem").innerHTML=q.stem||"";
+  $("ask").textContent=q.ask;
+  $("caseSlot").innerHTML=(q.case&&typeof CASES!=="undefined"&&CASES[q.case])
+    ?'<div class="casebox"><h4>'+CASES[q.case].title+'</h4>'+CASES[q.case].body+'</div>':"";
+  $("feedback").innerHTML="";
+  $("check").classList.remove("hide");
+  $("check").disabled=true;
+  $("check").textContent="Submit answer";
+  $("next").classList.add("hide");
+  const box=$("opts");box.innerHTML="";
+  q._pick=multi(q)?[]:undefined;
+  if(!q._order){
+    q._order=q.o.map((_,i)=>i);
+    for(let i=q._order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));
+      [q._order[i],q._order[j]]=[q._order[j],q._order[i]];}
+  }
+  q._disp=q._order.map(i=>q.o[i]);
+  q._ans=multi(q)?q.a.map(x=>q._order.indexOf(x)).sort((a,b)=>a-b)
+                 :q._order.indexOf(q.a);
+  q._disp.forEach((text,i)=>{
+    const lab=document.createElement("label");lab.className="opt";
+    lab.innerHTML='<input type="'+(multi(q)?"checkbox":"radio")+'" name="opt"><span>'+text+'</span>';
+    lab.onclick=e=>{
+      if(locked){e.preventDefault();return;}
+      if(e.target.tagName!=="INPUT")e.preventDefault();
+      if(multi(q)){
+        q._pick=q._pick.includes(i)?q._pick.filter(x=>x!==i):q._pick.concat([i]);
+      } else q._pick=i;
+      paintSel();
+      $("check").disabled=multi(q)?q._pick.length===0:q._pick===undefined;
+    };
+    box.appendChild(lab);
+  });
+  function paintSel(){
+    [...box.children].forEach((lab,i)=>{
+      const on=multi(q)?q._pick.includes(i):q._pick===i;
+      lab.classList.toggle("sel",on);
+      lab.querySelector("input").checked=on;
+    });
+  }
+}
+function isCorrect(q){
+  if(multi(q))return Array.isArray(q._pick)&&q._ans.slice().sort().join()===q._pick.slice().sort().join();
+  return q._pick===q._ans;
+}
+function check(){
+  const q=set[idx];locked=true;
+  const ok=isCorrect(q);
+  sessionDone++;if(ok)sessionRight++;else sessionMissed.push(q);
+  const id=qid(q);
+  store.seen[id]=ok;
+  if(ok)delete store.missed[id];else store.missed[id]=true;
+  save();
+  const box=$("opts");
+  [...box.children].forEach((lab,i)=>{
+    lab.classList.add("locked");lab.classList.remove("sel");
+    const isA=multi(q)?q._ans.includes(i):q._ans===i;
+    const picked=multi(q)?q._pick.includes(i):q._pick===i;
+    if(isA)lab.classList.add("correct");
+    else if(picked)lab.classList.add("wrong");
+    lab.querySelector("input").disabled=true;
+  });
+  const letters=["A","B","C","D","E"];
+  const answerTxt=multi(q)?q._ans.map(i=>letters[i]).join(" and "):letters[q._ans];
+  let fb='<div class="verdict '+(ok?"y":"n")+'">'+(ok?"Correct.":"Not quite — the correct answer is "+answerTxt+".")+'</div>';
+  fb+='<div class="expl"><span class="lbl">'+(ok?"Why this is right":"Why that is the right answer")+'</span>'+q.e+'</div>';
+  $("feedback").innerHTML=fb;
+  $("check").classList.add("hide");
+  $("next").classList.remove("hide");
+  $("next").textContent=idx===set.length-1?"See results":"Next question";
+  $("running").textContent=sessionRight+"/"+sessionDone+" correct";
+  $("pbar").style.width=((idx+1)/set.length*100)+"%";
+}
+function next(){
+  if(idx===set.length-1){finishSet();return;}
+  idx++;render();
+}
+function finishSet(){
+  const pct=sessionDone?Math.round(sessionRight/sessionDone*100):0;
+  $("dpct").textContent=pct+"%";
+  $("draw").textContent=sessionRight+" of "+sessionDone+" correct";
+  let msg;
+  if(pct>=90)msg="Solid. Move to another learning path or run the full set timed.";
+  else if(pct>=75)msg="Good, with a few gaps. Retry the ones you missed, then come back to this path in a day or two.";
+  else if(pct>=50)msg="Worth a second pass. Retry the missed questions now, then re-read the module units behind them.";
+  else msg="Go back to the module content for this path before drilling further — more repetition on shaky material tends to cement the wrong answer.";
+  $("dadvice").innerHTML='<div class="note">'+msg+'</div>';
+  $("againMissed").classList.toggle("hide",sessionMissed.length===0);
+  buildMenu();show("done");
+}
+$("check").onclick=check;
+$("next").onclick=next;
+$("allBtn").onclick=()=>startSet(BANK,"All questions");
+$("missedBtn").onclick=()=>{
+  const qs=BANK.filter(q=>store.missed[qid(q)]);
+  if(!qs.length){alert("No missed questions recorded yet. Answer some first.");return;}
+  startSet(qs,"Missed questions");
+};
+$("shuffleT").onclick=()=>{store.shuffle=!store.shuffle;save();
+  $("shuffleT").textContent="Shuffle: "+(store.shuffle?"on":"off");};
+$("home2").onclick=()=>{buildMenu();show("home");};
+$("home3").onclick=()=>{buildMenu();show("home");};
+$("againMissed").onclick=()=>{if(sessionMissed.length)startSet(sessionMissed,"Missed questions");};
+$("reset").onclick=()=>{if(confirm("Clear all saved progress?")){
+  store={seen:{},missed:{},shuffle:store.shuffle};save();buildMenu();}};
+load();
+$("shuffleT").textContent="Shuffle: "+(store.shuffle?"on":"off");
+buildMenu();
+show("home");
+</script></body></html>
